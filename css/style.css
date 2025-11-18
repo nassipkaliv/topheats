@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+	--system-100: #5ccc00;
+	--system-black: #272c39;
+	--system-white: #fff;
+	--system-error: #db394b;
+	--primary-100: #e2e9fb;
+	--primary-200: #8b9cc6;
+	--primary-300: #5570b2;
+}
+
+:root {
+  --font-family: "RF Dewi", sans-serif;
+  --second-family: "Inter Tight", sans-serif;
+  --third-family: "Micra", sans-serif;
+}
+
+body {
+  background: #f1f5ff;
+}
+
+.header {
+  padding: 40px 0;
+}
+
+.navbar-nav {
+  gap: 30px;
+}
+
+.nav-link {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: var(--system-black);
+}
+
+.nav-btn-item {
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-100);
+  border: none;
+}
+
+.nav-btn-item span {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: var(--system-black);
+}
+
+.sidebar {
+  border-right: 1px solid #e8ecf4;
+  min-width: 202px;
+  height: 100vh;
+  margin-right: 80px;
+}
+
+.sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 12px 14px;
+  gap: 10px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: var(--system-black);
+  transition: all 0.2s;
+}
+
+.sidebar .nav-link:hover {
+  background: var(--primary-300);
+  color: #fff;
+}
+
+.sidebar .nav-link:hover svg path {
+  fill: #fff;
+  stroke: #fff;
+}
+
+.sidebar .nav-link.active {
+  background: var(--primary-300);
+  color: #fff;
+}
+
+.main-content-title a {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--primary-300);
+  text-decoration: none;
+}
+
+.main-content-title .divider {
+  font-weight: 400;
+  color: #c3cce3;
+}
+
+.main-content-title span {
+  color: var(--system-black);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+}
+
+/* Heat Table Header */
+.heat-table-header {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.header-number {
+  min-width: 52px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;    
+  color: var(--primary-200);
+  text-align: center;
+}
+
+.header-athlete {
+  min-width: 120px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary-200);
+  text-align: center;
+}
+
+.header-judges {
+  display: flex;
+  gap: 8px;
+  padding-left: 22px;
+}
+
+.header-judge {
+  min-width: 52px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary-200);
+  text-align: center;
+}
+
+/* Heat Cards Layout */
+.heat-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.participant-card {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.participant-number-badge {
+  border-radius: 14px;
+  padding: 12px 12px 140px;
+  width: 62px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.participant-red {
+  background: #f72a40;
+}
+
+.participant-green {
+  background: linear-gradient(180deg, #51cf66 0%, #40c057 100%);
+}
+
+.participant-yellow {
+  background: linear-gradient(180deg, #ffd43b 0%, #fab005 100%);
+}
+
+.participant-number-badge .num {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 125%;
+  text-align: center;
+  color: var(--system-white);
+}
+
+.participant-number-badge .badge-label {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 3px 8px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 8px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Participant Content Container */
+.participant-content {
+  background: var(--system-white);
+  border-radius: 14px;
+  padding: 12px;
+  flex: 1;
+  display: flex;
+  gap: 12px;
+}
+
+.participant-name {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0.01em;
+  color: var(--system-black);
+  min-width: 120px;
+  display: flex;
+}
+
+.score-columns {
+  display: flex;
+  flex: 1;
+}
+
+.score-column {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 4px;
+  gap: 4px;
+}
+
+.score-column-rows {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  padding: 4px 0px;
+}
+
+.score-main {
+  border-radius: 12px;
+  padding: 12px 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 154%;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: var(--system-white);
+}
+
+.score-main.score-gray {
+  background: var(--primary-200);
+}
+
+.score-column-rows.green {
+  background: rgba(92, 204, 0, 0.3);
+}
+
+.score-main.score-green {
+  background: var(--system-100);
+}
+
+.score-main.score-blue {
+  background: #5570b2;
+}
+
+.score-row {
+  padding: 4px 12px;
+  min-width: 50px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 138%;
+  color: var(--system-black);
+}
+
+.score-row.highlighted {
+  background: rgba(81, 207, 102, 0.2);
+  color: #2f9e44;
+  font-weight: 700;
+}
+
+.score-row.score-error {
+  background: rgba(255, 107, 107, 0.15);
+  color: #ff6b6b;
+  font-weight: 700;
+}
+
+.score-row.faded {
+  opacity: 0.4;
+  color: #98a2b3;
+}
+
+/* Add Score Button */
+.add-score-btn {
+  background: var(--primary-300);
+  border: none;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.add-score-btn:hover {
+  background: #4461a0;
+}
+
+.add-score-btn svg {
+  width: 16px;
+  height: 16px;
+}
