@@ -175,7 +175,7 @@ p, h1, h2, h3, h4, h5, h6, span {
 
 .participant-number-badge {
   border-radius: 14px;
-  padding: 12px 12px 140px;
+  padding: 12px;
   width: 62px;
   display: flex;
   align-items: center;
@@ -193,6 +193,10 @@ p, h1, h2, h3, h4, h5, h6, span {
 
 .participant-yellow {
   background: #f7c42a;
+}
+
+.participant-gray {
+  background: #d9d9d9;
 }
 
 .participant-number-badge .num {
@@ -268,6 +272,8 @@ p, h1, h2, h3, h4, h5, h6, span {
   letter-spacing: 0.01em;
   color: var(--system-black);
   display: flex;
+  text-wrap: balance;
+  max-width: 130px;
 }
 
 .score-columns {
@@ -494,6 +500,29 @@ p, h1, h2, h3, h4, h5, h6, span {
   color: var(--system-white);
 }
 
+.score-main2 {
+  border-radius: 12px;
+  padding: 14px 12px;
+  background: #f1f5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 138%;
+  text-align: center;
+  color: var(--primary-300);
+}
+
+.header-judges2 {
+  gap: 20px;
+}
+
+.participant-number-badge2 {
+  min-height: 104px;
+}
+
 .only-mob {
   display: none;
 }
@@ -543,6 +572,7 @@ p, h1, h2, h3, h4, h5, h6, span {
 
   .main-content-title {
     margin-top: 4px;
+    margin-bottom: 16px;
   }
 
   .main-content-title span {
