@@ -491,5 +491,196 @@ p, h1, h2, h3, h4, h5, h6, span {
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 0.01em;
-  color: var(--system-white);  
+  color: var(--system-white);
+}
+
+.only-mob {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .only-pc {
+    display: none;
+  }
+
+  .only-mob {
+    display: block;
+  }
+
+  .header {
+    padding: 12px 0;
+  }
+
+  .navbar-nav {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .navbar-brand img {
+    mix-blend-mode: luminosity;
+    max-height: 40px;
+  }
+
+  .navbar-collapse {
+    flex-basis: auto;
+    flex-grow: unset;
+  }
+  
+  .navbar-nav-mobile {
+    display: flex;
+    align-items: center;
+    gap: 14px
+  }
+
+  .nav-burger {
+    border: none;
+    background: transparent;
+  }
+
+  .main-content-title {
+    margin-top: 4px;
+  }
+
+  .main-content-title span {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--system-black);
+  }
+
+  .main-content-title a {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--primary-300);
+  }
+
+  .main-content-title .divider {
+    font-weight: 400;
+    color: #c3cce3;
+  }
+
+  .heat-table-header {
+    display: none;
+  }
+
+  .bottom-content-row {
+    margin: 16px 0;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .bottom-content-white {
+    padding: 8px;
+  }
+
+  .bottom-content-white-text {
+    margin-bottom: 8px;
+  }
+
+  .bottom-content-white-title {
+    font-size: 18px;
+  }
+
+  .bottom-content-white-row {
+    justify-content: space-between;
+  }
+
+  .bottom-start-btn {
+    flex: 1;
+  }
+
+  .participant-number-badge {
+    border-radius: 12px;
+    padding: 13px;
+    max-height: 44px;
+    min-width: 80px;
+  }
+
+  .participant-number-badge .num {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 112%;
+  }
+
+  .participant-content {
+    overflow: hidden;
+  }
+
+  .score-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 100%;
+  }
+
+  .score-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .header-judges {
+    display: flex;
+    gap: 6px;
+    padding-left: 0;
+    margin-bottom: 8px;
+  }
+
+  .header-judge {
+    min-width: 52.5px;
+    flex-shrink: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--primary-200);
+    text-align: center;
+  }
+
+  .score-columns {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+
+  .score-column {
+    flex-shrink: 0;
+    min-width: 52px;
+  }
+  
+  .add-score-btn {
+    margin: 0;
+    width: 100%;
+  }
+
+  .header-judges {
+    padding-left: 0;
+  }
+  
+  .participant-card {
+    margin-bottom: 16px;
+  }
+
+  .participant-number-badge .badge-label {
+    border-radius: 8px;
+    padding: 4px 8px;
+    width: auto;
+    height: auto;
+    font-size: 12px;
+  }
+
+}
+
+@media (max-width: 540px) {
+  .container {
+    padding: 0 12px;
+  }
 }

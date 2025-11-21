@@ -8,19 +8,14 @@
   <title>Topheats - Main Ref</title>
 </head>
 <body>
-  <!-- Header -->
   <header class="header">
     <nav class="navbar navbar-expand-lg navbar-light py-0">
-      <div class="container">
+      <div class="container d-flex align-items-center">
         <a class="navbar-brand fw-bold" href="#">
           <img src="assets/img/logo.png" alt="logo">
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto ms-lg-5">
             <li class="nav-item">
               <a class="nav-link" href="#">Спортсмены</a>
@@ -68,6 +63,54 @@
               <span>Сноуборд</span>
             </button>
           </ul>
+
+          <div class="navbar-nav-mobile only-mob">
+            <div class="nav-item">
+              <a class="nav-link fw-400 d-flex align-items-center" href="#">
+                <span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H7L10 19L14 5L17 12H21" stroke="#272C39" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+            <div class="nav-item dropdown">
+              <a class="nav-link fw-400 d-flex align-items-center gap-1" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle cx="11" cy="11" r="11" fill="url(#pattern0_2012_11316)" />
+                    <defs>
+                      <pattern id="pattern0_2012_11316" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_2012_11316" transform="translate(-0.251366) scale(0.00546448)" />
+                      </pattern>
+                      <image id="image0_2012_11316" width="275" height="183" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAIAAAC+MS2jAAAEoElEQVR4Ae3VsU1lURAFwWcRAxIG9kaANqdNAIfgcAmKjeG0OSr0zTvGK00Pz68/AgR2gWcfMUGAwK9yLAGBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSLwPM8/PwIEZoGXt08/AgRWgWcd8J4AgZe3T+X4l0ugCCinqDm6BJSjHAJFQDlFzcUloBzlECgCyilqLi4B5SiHQBFQTlFzcQkoRzkEioByipqLS0A5yiFQBJRT1FxcAspRDoEioJyi5uISUI5yCBQB5RQ1F5eAcpRDoAgop6i5uASUoxwCRUA5Rc3FJaAc5RAoAsopai4uAeUoh0ARUE5Rc3EJKEc5BIqAcoqai0tAOcohUASUU9RcXALKUQ6BIqCcoubiElCOcggUAeUUNReXgHKUQ6AIKKeoubgElKMcAkVAOUXNxSWgHOUQKALKKWouLgHlKIdAEVBOUXNxCShHOQSKgHKKmotLQDnKIVAElFPUXFwCylEOgSKgnKLm4hJQjnIIFAHlFDUXl4BylEOgCCinqLm4BJSjHAJFQDlFzcUloBzlECgCyilqLi4B5SiHQBFQTlFzcQkoRzkEisDzvH75ESAwC/z8ffcjQGAVeL4//vgRILAKKMfhIFAElFPU1vvk/T0B5SiHQBFQTlG7d0F90SqgHOUQKALKKWrrffL+noBylEOgCCinqN27oL5oFVCOcggUAeUUtfU+eX9PQDnKIVAElFPU7l1QX7QKKEc5BIqAcoraep+8vyegHOUQKALKKWr3LqgvWgWUoxwCRUA5RW29T97fE1COcggUAeUUtXsX1BetAspRDoEioJyitt4n7+8JKEc5BIqAcoravQvqi1YB5SiHQBFQTlFb75P39wSUoxwCRUA5Re3eBfVFq4BylEOgCCinqK33yft7AspRDoEioJyidu+C+qJVQDnKIVAElFPU1vvk/T0B5SiHQBFQTlG7d0F90SqgHOUQKALKKWrrffL+noBylEOgCCinqN27oL5oFVCOcggUAeUUtfU+eX9PQDnKIVAElFPU7l1QX7QKKEc5BIqAcoraep+8vyegHOUQKALKKWr3LqgvWgWUoxwCRUA5RW29T97fE1COcggUAeUUtXsX1BetAspRDoEioJyitt4n7+8JKEc5BIqAcoravQvqi1YB5SiHQBFQTlFb75P39wSUoxwCReA/WMJUCOKnVeAAAAAASUVORK5CYII=" />
+                    </defs>
+                  </svg>
+                </span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li><a class="dropdown-item" href="#">Русский</a></li>
+                <li><a class="dropdown-item" href="#">English</a></li>
+              </ul>
+            </div>
+            <button class="nav-burger px-0">
+              <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_2012_11317)">
+                    <path d="M20 12.4473H4" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20 17.4473H4" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20 7.5H4" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2012_11317">
+                      <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+            </button>
+          </div>
+
         </div>
       </div>
     </nav>
@@ -196,7 +239,7 @@
       </div>
 
       <div class="col main-content">
-        <div class="container-fluid">
+        <div class="container-fluid px-0">
           <div class="main-content-title">
             <a href="#">Дивизион</a>
             <span class="divider">/</span>
@@ -217,7 +260,7 @@
             </div>
           </div>
 
-          <div class="heat-cards">
+          <div class="heat-cards only-pc">
             <div class="participant-card">
               <div class="participant-number-badge participant-red">
                 <span class="num">1</span>  
@@ -499,6 +542,318 @@
                     </svg>
                   </button>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="heat-cards only-mob">
+            <div class="participant-card">
+              <div class="participant-content flex-column">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex gap-3">
+                    <div class="participant-number-badge participant-red">
+                      <span class="num">1</span>  
+                    </div>
+                    <div class="participant-name">Павликов<br>Константин</div>
+                  </div>
+                  <div class="participant-number">0.95</div>
+                </div>
+                <div class="score-wrapper">
+                  <div class="header-judges">
+                    <div class="header-judge">1</div>
+                    <div class="header-judge">2</div>
+                    <div class="header-judge">3</div>
+                    <div class="header-judge">4</div>
+                    <div class="header-judge">5</div>
+                    <div class="header-judge">6</div>
+                    <div class="header-judge">7</div>
+                  </div>
+                  <div class="score-columns">
+                  <div class="score-column">
+                    <div class="score-main score-green">3.5</div>
+                    <div class="score-column-row">
+                      <div class="score-column-rows green">
+                        <div class="score-row">4</div>
+                        <div class="score-row">-</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">3,5</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">4</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="score-column">
+                    <div class="score-main score-gray">3.5</div>
+                    <div class="score-column-row">
+                      <div class="score-column-rows">
+                        <div class="score-row">4</div>
+                        <div class="score-row">-</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">3,5</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">4</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="score-column">
+                    <div class="score-main score-gray">3.5</div>
+                    <div class="score-column-row">
+                      <div class="score-column-rows">
+                        <div class="score-row">4</div>
+                        <div class="score-row">-</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">3,5</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">4</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="score-column">
+                    <div class="score-main score-gray">3.5</div>
+                    <div class="score-column-row">
+                      <div class="score-column-rows">
+                        <div class="score-row">4</div>
+                        <div class="score-row">-</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">3,5</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">4</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="score-column">
+                    <div class="score-main score-gray">3.5</div>
+                    <div class="score-column-row">
+                      <div class="score-column-rows">
+                        <div class="score-row">4</div>
+                        <div class="score-row">-</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">3,5</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">4</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="score-column">
+                    <div class="score-main score-green">3.5</div>
+                    <div class="score-column-row">
+                      <div class="score-column-rows green">
+                        <div class="score-row">4</div>
+                        <div class="score-row">-</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">3,5</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">4</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="score-column">
+                    <div class="score-main score-gray">3.5</div>
+                    <div class="score-column-row">
+                      <div class="score-column-rows">
+                        <div class="score-row">4</div>
+                        <div class="score-row">-</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">3,5</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">4</div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <button class="add-score-btn">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 3.33398V12.6673" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3.33325 8H12.6666" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="participant-card">
+              <div class="participant-content flex-column">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex gap-3">
+                    <div class="participant-number-badge participant-green d-flex flex-row justify-content-between">
+                      <span class="num">2</span>
+                      <span class="badge-label">П1</span>
+                    </div>
+                    <div class="participant-name">Павликов<br>Константин</div>
+                  </div>
+                  <div class="participant-number">0.95</div>
+                </div>
+                <div class="score-wrapper">
+                  <div class="header-judges">
+                    <div class="header-judge">1</div>
+                    <div class="header-judge">2</div>
+                    <div class="header-judge">3</div>
+                    <div class="header-judge">4</div>
+                    <div class="header-judge">5</div>
+                  </div>
+                  <div class="score-columns">
+                  <div class="score-column">
+                    <div class="score-main score-gray">0.5</div>
+                    <div class="score-column-row">
+                      <div class="score-column-rows">
+                        <div class="score-row">4</div>
+                        <div class="score-row">-</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">3,5</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">4</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="score-column">
+                    <div class="score-main score-green">3.5</div>
+                    <div class="score-column-row">
+                      <div class="score-column-rows green">
+                        <div class="score-row">4</div>
+                        <div class="score-row">-</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">3,5</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">4</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="score-column">
+                    <div class="score-main score-gray">2.75</div>
+                    <div class="score-column-row">
+                      <div class="score-column-rows">
+                        <div class="score-row">4</div>
+                        <div class="score-row">-</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">3,5</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">4</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="score-column">
+                    <div class="score-main score-gray">1.95</div>
+                    <div class="score-column-row">
+                      <div class="score-column-rows">
+                        <div class="score-row">4</div>
+                        <div class="score-row">-</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">3,5</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">4</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="score-column">
+                    <div class="score-main score-gray">0.95</div>
+                    <div class="score-column-row">
+                      <div class="score-column-rows">
+                        <div class="score-row">4</div>
+                        <div class="score-row">-</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">3,5</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">4</div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <button class="add-score-btn">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 3.33398V12.6673" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3.33325 8H12.6666" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="participant-card mb-0">
+              <div class="participant-content flex-column">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex gap-3">
+                    <div class="participant-number-badge participant-yellow d-flex flex-row justify-content-between">
+                      <span class="num">3</span>
+                      <span class="badge-label">П1</span>
+                    </div>
+                    <div class="participant-name">Носов<br>Антон</div>
+                  </div>
+                  <div class="participant-number">0.95</div>
+                </div>
+                <div class="score-wrapper">
+                  <div class="header-judges">
+                    <div class="header-judge">1</div>
+                    <div class="header-judge">2</div>
+                    <div class="header-judge">3</div>
+                    <div class="header-judge">4</div>
+                  </div>
+                  <div class="score-columns">
+                  <div class="score-column">
+                    <div class="score-main score-gray">3.5</div>
+                    <div class="score-column-row">
+                      <div class="score-column-rows">
+                        <div class="score-row">4</div>
+                        <div class="score-row">-</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">3,5</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">4</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="score-column">
+                    <div class="score-main score-green position-relative">
+                      0.5
+                      <span class="score-main-span">0.5</span>
+                    </div>
+                    <div class="score-column-row">
+                      <div class="score-column-rows green">
+                        <div class="score-row">4</div>
+                        <div class="score-row">-</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">3,5</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">4</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="score-column">
+                    <div class="score-main score-green">2.75</div>
+                    <div class="score-column-row">
+                      <div class="score-column-rows column-candy-bg">
+                        <div class="score-row">4</div>
+                        <div class="score-row">-</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">3,5</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">4</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="score-column">
+                    <div class="score-main score-gray">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.875 17.5004C16.793 17.5005 16.7117 17.4844 16.6358 17.453C16.56 17.4215 16.4912 17.3754 16.4333 17.3172L2.68325 3.5672C2.57099 3.44904 2.50933 3.29169 2.51141 3.12872C2.5135 2.96574 2.57917 2.81003 2.69442 2.69478C2.80967 2.57953 2.96538 2.51386 3.12836 2.51177C3.29134 2.50968 3.44868 2.57134 3.56684 2.68361L17.3168 16.4336C17.4042 16.521 17.4637 16.6324 17.4878 16.7536C17.5119 16.8748 17.4995 17.0004 17.4522 17.1145C17.4049 17.2287 17.3249 17.3263 17.2221 17.395C17.1194 17.4637 16.9986 17.5003 16.875 17.5004ZM9.98677 15.0004C8.36606 15.0004 6.80317 14.5207 5.34145 13.5746C4.01059 12.7152 2.81255 11.4844 1.87661 10.0199V10.0168C2.65552 8.9008 3.50864 7.95705 4.42505 7.19611C4.43334 7.18918 4.4401 7.1806 4.44491 7.17092C4.44971 7.16125 4.45246 7.15068 4.45297 7.13988C4.45349 7.12909 4.45176 7.11831 4.44789 7.10822C4.44403 7.09813 4.43811 7.08895 4.43052 7.08126L3.65239 6.30431C3.63856 6.29037 3.61999 6.28215 3.60038 6.28128C3.58076 6.28041 3.56154 6.28696 3.54653 6.29962C2.57309 7.11994 1.66958 8.12619 0.848093 9.30431C0.706759 9.50716 0.628921 9.74746 0.62447 9.99465C0.620018 10.2418 0.689155 10.4848 0.823094 10.6926C1.85473 12.307 3.18247 13.6668 4.66216 14.6242C6.32817 15.7035 8.12114 16.2504 9.98677 16.2504C10.9938 16.2473 11.9937 16.0814 12.9477 15.759C12.9603 15.7547 12.9716 15.7473 12.9805 15.7375C12.9894 15.7276 12.9957 15.7157 12.9987 15.7027C13.0017 15.6898 13.0014 15.6763 12.9977 15.6635C12.9941 15.6507 12.9872 15.6391 12.9778 15.6297L12.1348 14.7867C12.1154 14.7678 12.0914 14.7542 12.0652 14.7474C12.0389 14.7406 12.0114 14.7406 11.9852 14.7477C11.3324 14.9158 10.6609 15.0007 9.98677 15.0004ZM19.1735 9.32072C18.1399 7.72228 16.7989 6.36447 15.2958 5.39376C13.6329 4.31876 11.7969 3.7504 9.98677 3.7504C8.99042 3.75214 8.00148 3.92157 7.06137 4.25158C7.04885 4.25593 7.03764 4.26341 7.0288 4.2733C7.01996 4.28319 7.01379 4.29516 7.01086 4.3081C7.00793 4.32103 7.00834 4.3345 7.01205 4.34723C7.01576 4.35996 7.02265 4.37154 7.03208 4.38087L7.87388 5.22267C7.89347 5.24193 7.9178 5.25569 7.94441 5.26255C7.97102 5.2694 7.99897 5.26912 8.02544 5.26173C8.66488 5.08875 9.32434 5.00088 9.98677 5.0004C11.5762 5.0004 13.1344 5.48595 14.6176 6.44572C15.9735 7.32072 17.1856 8.5504 18.1239 10.0004C18.1246 10.0013 18.125 10.0024 18.125 10.0035C18.125 10.0047 18.1246 10.0058 18.1239 10.0067C17.4428 11.0789 16.5976 12.0376 15.6192 12.8477C15.6108 12.8546 15.604 12.8631 15.5991 12.8728C15.5942 12.8825 15.5914 12.8932 15.5908 12.904C15.5903 12.9148 15.592 12.9257 15.5959 12.9358C15.5998 12.946 15.6057 12.9552 15.6133 12.9629L16.3907 13.7399C16.4044 13.7537 16.4229 13.762 16.4424 13.7629C16.4619 13.7639 16.4811 13.7574 16.4961 13.7449C17.5407 12.8654 18.4448 11.8317 19.1774 10.6793C19.3069 10.4762 19.3753 10.2403 19.3746 9.99944C19.374 9.75861 19.3041 9.52304 19.1735 9.32072Z" fill="white" />
+                        <path d="M10.0001 6.25C9.71917 6.24989 9.43916 6.28134 9.16529 6.34375C9.15146 6.34662 9.13867 6.35319 9.12827 6.36276C9.11788 6.37233 9.11027 6.38453 9.10626 6.39808C9.10225 6.41163 9.10199 6.42601 9.10551 6.43969C9.10903 6.45337 9.11619 6.46585 9.12623 6.47578L13.5243 10.8727C13.5342 10.8827 13.5467 10.8899 13.5604 10.8934C13.5741 10.8969 13.5884 10.8966 13.602 10.8926C13.6155 10.8886 13.6277 10.881 13.6373 10.8706C13.6469 10.8602 13.6534 10.8474 13.6563 10.8336C13.7815 10.2844 13.7814 9.71403 13.656 9.16488C13.5305 8.61573 13.283 8.1019 12.9317 7.66154C12.5804 7.22118 12.1345 6.86562 11.6269 6.62125C11.1194 6.37688 10.5634 6.24999 10.0001 6.25ZM6.47584 9.12734C6.4659 9.1173 6.45343 9.11014 6.43975 9.10662C6.42606 9.10311 6.41168 9.10337 6.39814 9.10737C6.38459 9.11138 6.37238 9.11899 6.36282 9.12938C6.35325 9.13978 6.34668 9.15257 6.34381 9.16641C6.20215 9.78529 6.21993 10.43 6.39551 11.0401C6.57108 11.6503 6.89868 12.2058 7.34762 12.6548C7.79655 13.1037 8.35212 13.4313 8.96226 13.6069C9.57239 13.7825 10.2171 13.8003 10.836 13.6586C10.8498 13.6557 10.8626 13.6492 10.873 13.6396C10.8834 13.63 10.891 13.6178 10.895 13.6043C10.899 13.5907 10.8993 13.5763 10.8958 13.5627C10.8923 13.549 10.8851 13.5365 10.8751 13.5266L6.47584 9.12734Z" fill="white" />
+                      </svg>
+                    </div>
+                    <div class="score-column-row">
+                      <div class="score-column-rows column-candy-bg2">
+                        <div class="score-row">-</div>
+                        <div class="score-row">-</div>
+                        <div class="score-row">3</div>
+                        <div class="score-row">-</div>
+                        <div class="score-row">-</div>
+                        <div class="score-row">-</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <button class="add-score-btn">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 3.33398V12.6673" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3.33325 8H12.6666" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
