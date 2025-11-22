@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Topheats - Распределения</title>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light py-0">
+      <div class="container d-flex align-items-center">
+        <a class="navbar-brand fw-bold" href="#">
+          <img src="assets/img/logo.png" alt="logo">
+        </a>
+
+        <div class="navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto ms-lg-5">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Спортсмены</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Команды</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Организаторы</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link fw-400 d-flex align-items-center" href="#">
+                <span class="me-2">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 8.00065H4.66667L6.66667 12.6673L9.33333 3.33398L11.3333 8.00065H14" stroke="#272C39" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                Мои событие
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link fw-400 d-flex align-items-center gap-1" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="me-2">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle cx="8" cy="8" r="8" fill="url(#pattern0_460_8537)" />
+                    <defs>
+                      <pattern id="pattern0_460_8537" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_460_8537" transform="translate(-0.251366) scale(0.00546448)" />
+                      </pattern>
+                      <image id="image0_460_8537" width="275" height="183" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAIAAAC+MS2jAAAEoElEQVR4Ae3VsU1lURAFwWcRAxIG9kaANqdNAIfgcAmKjeG0OSr0zTvGK00Pz68/AgR2gWcfMUGAwK9yLAGBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSLwPM8/PwIEZoGXt08/AgRWgWcd8J4AgZe3T+X4l0ugCCinqDm6BJSjHAJFQDlFzcUloBzlECgCyilqLi4B5SiHQBFQTlFzcQkoRzkEioByipqLS0A5yiFQBJRT1FxcAspRDoEioJyi5uISUI5yCBQB5RQ1F5eAcpRDoAgop6i5uASUoxwCRUA5Rc3FJaAc5RAoAsopai4uAeUoh0ARUE5Rc3EJKEc5BIqAcoqai0tAOcohUASUU9RcXALKUQ6BIqCcoubiElCOcggUAeUUNReXgHKUQ6AIKKeoubgElKMcAkVAOUXNxSWgHOUQKALKKWouLgHlKIdAEVBOUXNxCShHOQSKgHKKmotLQDnKIVAElFPUXFwCylEOgSKgnKLm4hJQjnIIFAHlFDUXl4BylEOgCCinqLm4BJSjHAJFQDlFzcUloBzlECgCyilqLi4B5SiHQBFQTlFzcQkoRzkEisDzvH75ESAwC/z8ffcjQGAVeL4//vgRILAKKMfhIFAElFPU1vvk/T0B5SiHQBFQTlG7d0F90SqgHOUQKALKKWrrffL+noBylEOgCCinqN27oL5oFVCOcggUAeUUtfU+eX9PQDnKIVAElFPU7l1QX7QKKEc5BIqAcoraep+8vyegHOUQKALKKWr3LqgvWgWUoxwCRUA5RW29T97fE1COcggUAeUUtXsX1BetAspRDoEioJyitt4n7+8JKEc5BIqAcoravQvqi1YB5SiHQBFQTlFb75P39wSUoxwCRUA5Re3eBfVFq4BylEOgCCinqK33yft7AspRDoEioJyidu+C+qJVQDnKIVAElFPU1vvk/T0B5SiHQBFQTlG7d0F90SqgHOUQKALKKWrrffL+noBylEOgCCinqN27oL5oFVCOcggUAeUUtfU+eX9PQDnKIVAElFPU7l1QX7QKKEc5BIqAcoraep+8vyegHOUQKALKKWr3LqgvWgWUoxwCRUA5RW29T97fE1COcggUAeUUtXsX1BetAspRDoEioJyitt4n7+8JKEc5BIqAcoravQvqi1YB5SiHQBFQTlFb75P39wSUoxwCReA/WMJUCOKnVeAAAAAASUVORK5CYII=" />
+                    </defs>
+                  </svg>
+                </span>
+                Русский
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li><a class="dropdown-item" href="#">Русский</a></li>
+                <li><a class="dropdown-item" href="#">English</a></li>
+              </ul>
+            </li>
+            <button class="nav-btn-item">
+              <span>Сноуборд</span>
+            </button>
+          </ul>
+
+          <div class="navbar-nav-mobile only-mob">
+            <div class="nav-item">
+              <a class="nav-link fw-400 d-flex align-items-center" href="#">
+                <span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H7L10 19L14 5L17 12H21" stroke="#272C39" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+            <div class="nav-item dropdown">
+              <a class="nav-link fw-400 d-flex align-items-center gap-1" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle cx="11" cy="11" r="11" fill="url(#pattern0_2012_11316)" />
+                    <defs>
+                      <pattern id="pattern0_2012_11316" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_2012_11316" transform="translate(-0.251366) scale(0.00546448)" />
+                      </pattern>
+                      <image id="image0_2012_11316" width="275" height="183" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAIAAAC+MS2jAAAEoElEQVR4Ae3VsU1lURAFwWcRAxIG9kaANqdNAIfgcAmKjeG0OSr0zTvGK00Pz68/AgR2gWcfMUGAwK9yLAGBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSLwPM8/PwIEZoGXt08/AgRWgWcd8J4AgZe3T+X4l0ugCCinqDm6BJSjHAJFQDlFzcUloBzlECgCyilqLi4B5SiHQBFQTlFzcQkoRzkEioByipqLS0A5yiFQBJRT1FxcAspRDoEioJyi5uISUI5yCBQB5RQ1F5eAcpRDoAgop6i5uASUoxwCRUA5Rc3FJaAc5RAoAsopai4uAeUoh0ARUE5Rc3EJKEc5BIqAcoqai0tAOcohUASUU9RcXALKUQ6BIqCcoubiElCOcggUAeUUNReXgHKUQ6AIKKeoubgElKMcAkVAOUXNxSWgHOUQKALKKWouLgHlKIdAEVBOUXNxCShHOQSKgHKKmotLQDnKIVAElFPUXFwCylEOgSKgnKLm4hJQjnIIFAHlFDUXl4BylEOgCCinqLm4BJSjHAJFQDlFzcUloBzlECgCyilqLi4B5SiHQBFQTlFzcQkoRzkEisDzvH75ESAwC/z8ffcjQGAVeL4//vgRILAKKMfhIFAElFPU1vvk/T0B5SiHQBFQTlG7d0F90SqgHOUQKALKKWrrffL+noBylEOgCCinqN27oL5oFVCOcggUAeUUtfU+eX9PQDnKIVAElFPU7l1QX7QKKEc5BIqAcoraep+8vyegHOUQKALKKWr3LqgvWgWUoxwCRUA5RW29T97fE1COcggUAeUUtXsX1BetAspRDoEioJyitt4n7+8JKEc5BIqAcoravQvqi1YB5SiHQBFQTlFb75P39wSUoxwCRUA5Re3eBfVFq4BylEOgCCinqK33yft7AspRDoEioJyidu+C+qJVQDnKIVAElFPU1vvk/T0B5SiHQBFQTlG7d0F90SqgHOUQKALKKWrrffL+noBylEOgCCinqN27oL5oFVCOcggUAeUUtfU+eX9PQDnKIVAElFPU7l1QX7QKKEc5BIqAcoraep+8vyegHOUQKALKKWr3LqgvWgWUoxwCRUA5RW29T97fE1COcggUAeUUtXsX1BetAspRDoEioJyitt4n7+8JKEc5BIqAcoravQvqi1YB5SiHQBFQTlFb75P39wSUoxwCReA/WMJUCOKnVeAAAAAASUVORK5CYII=" />
+                    </defs>
+                  </svg>
+                </span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li><a class="dropdown-item" href="#">Русский</a></li>
+                <li><a class="dropdown-item" href="#">English</a></li>
+              </ul>
+            </div>
+            <button class="nav-burger px-0">
+              <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_2012_11317)">
+                    <path d="M20 12.4473H4" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20 17.4473H4" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20 7.5H4" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2012_11317">
+                      <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container mb50">
+    <h1 class="tour-title">
+      Мужчины
+    </h1>
+
+    <div class="spread-btn-row d-flex align-items-center">
+      <button class="spread-btn active">
+        Распределения
+      </button>
+      <button class="spread-btn">
+        Результаты
+      </button>
+    </div>
+
+    <div class="rounds-row">
+      <div class="round-container">
+        <h2 class="round-title">Раунд 1</h2>
+        <div class="round-block">
+          <div class="d-flex align-items-center justify-content-between">
+            <h2 class="tour-hit-title">Хит 1</h2>
+            <button class="round-block-edit border-0 bg-transparent">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <button class="tour-time">11:59</button>
+          <div class="tour-table-header d-flex align-items-center justify-content-between">
+            <div class="tour-table-header-left d-flex gap-3">
+              <div class="tour-table-header-text">№</div>
+              <div class="tour-table-header-text">ИМЯ</div>
+            </div>
+            <div class="tour-table-header-right">
+              <div class="tour-table-header-text">
+                ОЧКИ
+              </div>
+            </div>
+          </div>
+          <div class="round-block-row d-flex align-items-center justify-content-between">
+              <div class="tour-table-row-left d-flex align-items-center gap-3">
+                <div class="round-row-number">1</div>
+                <div class="tour-row-number-user user-bg1">ПК</div>
+                <div class="tour-row-user-name">Павликов <br> Константин</div>
+              </div>
+              <div class="tour-table-row-right d-flex flex-column">
+                <div class="block-row-points">5.45</div>
+                <div class="block-row-under-points">7.50+7.43</div>
+              </div>
+          </div>
+          <div class="round-block-row">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="tour-table-row-left d-flex align-items-center gap-3">
+                <div class="round-row-number">2</div>
+                <div class="tour-row-number-user user-bg2">ИА</div>
+                <div class="tour-row-user-name">Ильин<br>Александр</div>
+              </div>
+              <div class="tour-table-row-right d-flex flex-column">
+                <div class="block-row-points">5.45</div>
+                <div class="block-row-under-points">7.50+7.43</div>
+              </div>
+              </div>
+              <div class="round-block-lead">
+                до №1 — 3.46
+              </div>
+          </div>
+          <div class="round-block-row">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="tour-table-row-left d-flex align-items-center gap-3">
+                <div class="round-row-number">3</div>
+                <div class="tour-row-number-user user-bg3">НА</div>
+                <div class="tour-row-user-name">Носов<br>Антон</div>
+              </div>
+              <div class="tour-table-row-right d-flex flex-column">
+                <div class="block-row-points">5.45</div>
+                <div class="block-row-under-points">7.50+7.43</div>
+              </div>
+              </div>
+              <div class="round-block-lead">
+                выход - 0.96
+              </div>
+          </div>
+          <div class="round-block-row border-0 mb-0 pb-0">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="tour-table-row-left d-flex align-items-center gap-3">
+                <div class="round-row-number">4</div>
+                <div class="tour-row-number-user user-bg4">ЧА</div>
+                <div class="tour-row-user-name">Черепенников<br>Антон</div>
+              </div>
+              <div class="tour-table-row-right d-flex flex-column">
+                <div class="block-row-points">5.45</div>
+                <div class="block-row-under-points">7.50+7.43</div>
+              </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="round-container">
+        <h2 class="round-title">Четвертьфинал</h2>
+        <div class="round-block">
+          <div class="d-flex align-items-center justify-content-between">
+            <h2 class="tour-hit-title">Хит 1</h2>
+            <button class="round-block-edit border-0 bg-transparent">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <button class="tour-time">11:59</button>
+          <div class="tour-table-header d-flex align-items-center justify-content-between">
+            <div class="tour-table-header-left d-flex gap-3">
+              <div class="tour-table-header-text">№</div>
+              <div class="tour-table-header-text">ИМЯ</div>
+            </div>
+            <div class="tour-table-header-right">
+              <div class="tour-table-header-text">
+                ОЧКИ
+              </div>
+            </div>
+          </div>
+          <div class="round-block-row d-flex align-items-center justify-content-between">
+              <div class="tour-table-row-left d-flex align-items-center gap-3">
+                <div class="round-row-number">1</div>
+                <div class="tour-row-number-user user-bg1">ПК</div>
+                <div class="tour-row-user-name">Павликов <br> Константин</div>
+              </div>
+              <div class="tour-table-row-right d-flex flex-column">
+                <div class="block-row-points">5.45</div>
+                <div class="block-row-under-points">7.50+7.43</div>
+              </div>
+          </div>
+          <div class="round-block-row">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="tour-table-row-left d-flex align-items-center gap-3">
+                <div class="round-row-number">2</div>
+                <div class="tour-row-number-user user-bg2">ИА</div>
+                <div class="tour-row-user-name">Ильин<br>Александр</div>
+              </div>
+              <div class="tour-table-row-right d-flex flex-column">
+                <div class="block-row-points">5.45</div>
+                <div class="block-row-under-points">7.50+7.43</div>
+              </div>
+              </div>
+              <div class="round-block-lead">
+                до №1 — 3.46
+              </div>
+          </div>
+          <div class="round-block-row">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="tour-table-row-left d-flex align-items-center gap-3">
+                <div class="round-row-number">3</div>
+                <div class="tour-row-number-user user-bg3">НА</div>
+                <div class="tour-row-user-name">Носов<br>Антон</div>
+              </div>
+              <div class="tour-table-row-right d-flex flex-column">
+                <div class="block-row-points">5.45</div>
+                <div class="block-row-under-points">7.50+7.43</div>
+              </div>
+              </div>
+              <div class="round-block-lead">
+                выход - 0.96
+              </div>
+          </div>
+          <div class="round-block-row border-0 mb-0 pb-0">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="tour-table-row-left d-flex align-items-center gap-3">
+                <div class="round-row-number">4</div>
+                <div class="tour-row-number-user user-bg4">ЧА</div>
+                <div class="tour-row-user-name">Черепенников<br>Антон</div>
+              </div>
+              <div class="tour-table-row-right d-flex flex-column">
+                <div class="block-row-points">5.45</div>
+                <div class="block-row-under-points">7.50+7.43</div>
+              </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="round-container">
+        <h2 class="round-title">Полуфинал</h2>
+        <div class="round-block">
+          <div class="d-flex align-items-center justify-content-between">
+            <h2 class="tour-hit-title">Хит 1</h2>
+            <button class="round-block-edit border-0 bg-transparent">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <button class="tour-time">11:59</button>
+          <div class="tour-table-header d-flex align-items-center justify-content-between">
+            <div class="tour-table-header-left d-flex gap-3">
+              <div class="tour-table-header-text">№</div>
+              <div class="tour-table-header-text">ИМЯ</div>
+            </div>
+            <div class="tour-table-header-right">
+              <div class="tour-table-header-text">
+                ОЧКИ
+              </div>
+            </div>
+          </div>
+          <div class="round-block-row d-flex align-items-center justify-content-between">
+              <div class="tour-table-row-left d-flex align-items-center gap-3">
+                <div class="round-row-number">1</div>
+                <div class="tour-row-number-user user-bg1">ПК</div>
+                <div class="tour-row-user-name">Павликов <br> Константин</div>
+              </div>
+              <div class="tour-table-row-right d-flex flex-column">
+                <div class="block-row-points">5.45</div>
+                <div class="block-row-under-points">7.50+7.43</div>
+              </div>
+          </div>
+          <div class="round-block-row">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="tour-table-row-left d-flex align-items-center gap-3">
+                <div class="round-row-number">2</div>
+                <div class="tour-row-number-user user-bg2">ИА</div>
+                <div class="tour-row-user-name">Ильин<br>Александр</div>
+              </div>
+              <div class="tour-table-row-right d-flex flex-column">
+                <div class="block-row-points">5.45</div>
+                <div class="block-row-under-points">7.50+7.43</div>
+              </div>
+              </div>
+              <div class="round-block-lead">
+                до №1 — 3.46
+              </div>
+          </div>
+          <div class="round-block-row">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="tour-table-row-left d-flex align-items-center gap-3">
+                <div class="round-row-number">3</div>
+                <div class="tour-row-number-user user-bg3">НА</div>
+                <div class="tour-row-user-name">Носов<br>Антон</div>
+              </div>
+              <div class="tour-table-row-right d-flex flex-column">
+                <div class="block-row-points">5.45</div>
+                <div class="block-row-under-points">7.50+7.43</div>
+              </div>
+              </div>
+              <div class="round-block-lead">
+                выход - 0.96
+              </div>
+          </div>
+          <div class="round-block-row border-0 mb-0 pb-0">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="tour-table-row-left d-flex align-items-center gap-3">
+                <div class="round-row-number">4</div>
+                <div class="tour-row-number-user user-bg4">ЧА</div>
+                <div class="tour-row-user-name">Черепенников<br>Антон</div>
+              </div>
+              <div class="tour-table-row-right d-flex flex-column">
+                <div class="block-row-points">5.45</div>
+                <div class="block-row-under-points">7.50+7.43</div>
+              </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="round-container">
+        <h2 class="round-title">Финал</h2>
+        <div class="round-block">
+          <div class="d-flex align-items-center justify-content-between">
+            <h2 class="tour-hit-title">Хит 1</h2>
+            <button class="round-block-edit border-0 bg-transparent">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <button class="tour-time">11:59</button>
+          <div class="tour-table-header d-flex align-items-center justify-content-between">
+            <div class="tour-table-header-left d-flex gap-3">
+              <div class="tour-table-header-text">№</div>
+              <div class="tour-table-header-text">ИМЯ</div>
+            </div>
+            <div class="tour-table-header-right">
+              <div class="tour-table-header-text">
+                ОЧКИ
+              </div>
+            </div>
+          </div>
+          <div class="round-block-row d-flex align-items-center justify-content-between">
+              <div class="tour-table-row-left d-flex align-items-center gap-3">
+                <div class="round-row-number">1</div>
+                <div class="tour-row-number-user user-bg1">ПК</div>
+                <div class="tour-row-user-name">Павликов <br> Константин</div>
+              </div>
+              <div class="tour-table-row-right d-flex flex-column">
+                <div class="block-row-points">5.45</div>
+                <div class="block-row-under-points">7.50+7.43</div>
+              </div>
+          </div>
+          <div class="round-block-row">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="tour-table-row-left d-flex align-items-center gap-3">
+                <div class="round-row-number">2</div>
+                <div class="tour-row-number-user user-bg2">ИА</div>
+                <div class="tour-row-user-name">Ильин<br>Александр</div>
+              </div>
+              <div class="tour-table-row-right d-flex flex-column">
+                <div class="block-row-points">5.45</div>
+                <div class="block-row-under-points">7.50+7.43</div>
+              </div>
+              </div>
+              <div class="round-block-lead">
+                до №1 — 3.46
+              </div>
+          </div>
+          <div class="round-block-row">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="tour-table-row-left d-flex align-items-center gap-3">
+                <div class="round-row-number">3</div>
+                <div class="tour-row-number-user user-bg3">НА</div>
+                <div class="tour-row-user-name">Носов<br>Антон</div>
+              </div>
+              <div class="tour-table-row-right d-flex flex-column">
+                <div class="block-row-points">5.45</div>
+                <div class="block-row-under-points">7.50+7.43</div>
+              </div>
+              </div>
+              <div class="round-block-lead">
+                выход - 0.96
+              </div>
+          </div>
+          <div class="round-block-row border-0 mb-0 pb-0">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="tour-table-row-left d-flex align-items-center gap-3">
+                <div class="round-row-number">4</div>
+                <div class="tour-row-number-user user-bg4">ЧА</div>
+                <div class="tour-row-user-name">Черепенников<br>Антон</div>
+              </div>
+              <div class="tour-table-row-right d-flex flex-column">
+                <div class="block-row-points">5.45</div>
+                <div class="block-row-under-points">7.50+7.43</div>
+              </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
