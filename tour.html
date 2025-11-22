@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Topheats - Main</title>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light py-0">
+      <div class="container d-flex align-items-center">
+        <a class="navbar-brand fw-bold" href="#">
+          <img src="assets/img/logo.png" alt="logo">
+        </a>
+
+        <div class="navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto ms-lg-5">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Спортсмены</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Команды</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Организаторы</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link fw-400 d-flex align-items-center" href="#">
+                <span class="me-2">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 8.00065H4.66667L6.66667 12.6673L9.33333 3.33398L11.3333 8.00065H14" stroke="#272C39" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                Мои событие
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link fw-400 d-flex align-items-center gap-1" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="me-2">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle cx="8" cy="8" r="8" fill="url(#pattern0_460_8537)" />
+                    <defs>
+                      <pattern id="pattern0_460_8537" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_460_8537" transform="translate(-0.251366) scale(0.00546448)" />
+                      </pattern>
+                      <image id="image0_460_8537" width="275" height="183" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAIAAAC+MS2jAAAEoElEQVR4Ae3VsU1lURAFwWcRAxIG9kaANqdNAIfgcAmKjeG0OSr0zTvGK00Pz68/AgR2gWcfMUGAwK9yLAGBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSLwPM8/PwIEZoGXt08/AgRWgWcd8J4AgZe3T+X4l0ugCCinqDm6BJSjHAJFQDlFzcUloBzlECgCyilqLi4B5SiHQBFQTlFzcQkoRzkEioByipqLS0A5yiFQBJRT1FxcAspRDoEioJyi5uISUI5yCBQB5RQ1F5eAcpRDoAgop6i5uASUoxwCRUA5Rc3FJaAc5RAoAsopai4uAeUoh0ARUE5Rc3EJKEc5BIqAcoqai0tAOcohUASUU9RcXALKUQ6BIqCcoubiElCOcggUAeUUNReXgHKUQ6AIKKeoubgElKMcAkVAOUXNxSWgHOUQKALKKWouLgHlKIdAEVBOUXNxCShHOQSKgHKKmotLQDnKIVAElFPUXFwCylEOgSKgnKLm4hJQjnIIFAHlFDUXl4BylEOgCCinqLm4BJSjHAJFQDlFzcUloBzlECgCyilqLi4B5SiHQBFQTlFzcQkoRzkEisDzvH75ESAwC/z8ffcjQGAVeL4//vgRILAKKMfhIFAElFPU1vvk/T0B5SiHQBFQTlG7d0F90SqgHOUQKALKKWrrffL+noBylEOgCCinqN27oL5oFVCOcggUAeUUtfU+eX9PQDnKIVAElFPU7l1QX7QKKEc5BIqAcoraep+8vyegHOUQKALKKWr3LqgvWgWUoxwCRUA5RW29T97fE1COcggUAeUUtXsX1BetAspRDoEioJyitt4n7+8JKEc5BIqAcoravQvqi1YB5SiHQBFQTlFb75P39wSUoxwCRUA5Re3eBfVFq4BylEOgCCinqK33yft7AspRDoEioJyidu+C+qJVQDnKIVAElFPU1vvk/T0B5SiHQBFQTlG7d0F90SqgHOUQKALKKWrrffL+noBylEOgCCinqN27oL5oFVCOcggUAeUUtfU+eX9PQDnKIVAElFPU7l1QX7QKKEc5BIqAcoraep+8vyegHOUQKALKKWr3LqgvWgWUoxwCRUA5RW29T97fE1COcggUAeUUtXsX1BetAspRDoEioJyitt4n7+8JKEc5BIqAcoravQvqi1YB5SiHQBFQTlFb75P39wSUoxwCReA/WMJUCOKnVeAAAAAASUVORK5CYII=" />
+                    </defs>
+                  </svg>
+                </span>
+                Русский
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li><a class="dropdown-item" href="#">Русский</a></li>
+                <li><a class="dropdown-item" href="#">English</a></li>
+              </ul>
+            </li>
+            <button class="nav-btn-item">
+              <span>Сноуборд</span>
+            </button>
+          </ul>
+
+          <div class="navbar-nav-mobile only-mob">
+            <div class="nav-item">
+              <a class="nav-link fw-400 d-flex align-items-center" href="#">
+                <span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H7L10 19L14 5L17 12H21" stroke="#272C39" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+            <div class="nav-item dropdown">
+              <a class="nav-link fw-400 d-flex align-items-center gap-1" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle cx="11" cy="11" r="11" fill="url(#pattern0_2012_11316)" />
+                    <defs>
+                      <pattern id="pattern0_2012_11316" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_2012_11316" transform="translate(-0.251366) scale(0.00546448)" />
+                      </pattern>
+                      <image id="image0_2012_11316" width="275" height="183" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAIAAAC+MS2jAAAEoElEQVR4Ae3VsU1lURAFwWcRAxIG9kaANqdNAIfgcAmKjeG0OSr0zTvGK00Pz68/AgR2gWcfMUGAwK9yLAGBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSLwPM8/PwIEZoGXt08/AgRWgWcd8J4AgZe3T+X4l0ugCCinqDm6BJSjHAJFQDlFzcUloBzlECgCyilqLi4B5SiHQBFQTlFzcQkoRzkEioByipqLS0A5yiFQBJRT1FxcAspRDoEioJyi5uISUI5yCBQB5RQ1F5eAcpRDoAgop6i5uASUoxwCRUA5Rc3FJaAc5RAoAsopai4uAeUoh0ARUE5Rc3EJKEc5BIqAcoqai0tAOcohUASUU9RcXALKUQ6BIqCcoubiElCOcggUAeUUNReXgHKUQ6AIKKeoubgElKMcAkVAOUXNxSWgHOUQKALKKWouLgHlKIdAEVBOUXNxCShHOQSKgHKKmotLQDnKIVAElFPUXFwCylEOgSKgnKLm4hJQjnIIFAHlFDUXl4BylEOgCCinqLm4BJSjHAJFQDlFzcUloBzlECgCyilqLi4B5SiHQBFQTlFzcQkoRzkEisDzvH75ESAwC/z8ffcjQGAVeL4//vgRILAKKMfhIFAElFPU1vvk/T0B5SiHQBFQTlG7d0F90SqgHOUQKALKKWrrffL+noBylEOgCCinqN27oL5oFVCOcggUAeUUtfU+eX9PQDnKIVAElFPU7l1QX7QKKEc5BIqAcoraep+8vyegHOUQKALKKWr3LqgvWgWUoxwCRUA5RW29T97fE1COcggUAeUUtXsX1BetAspRDoEioJyitt4n7+8JKEc5BIqAcoravQvqi1YB5SiHQBFQTlFb75P39wSUoxwCRUA5Re3eBfVFq4BylEOgCCinqK33yft7AspRDoEioJyidu+C+qJVQDnKIVAElFPU1vvk/T0B5SiHQBFQTlG7d0F90SqgHOUQKALKKWrrffL+noBylEOgCCinqN27oL5oFVCOcggUAeUUtfU+eX9PQDnKIVAElFPU7l1QX7QKKEc5BIqAcoraep+8vyegHOUQKALKKWr3LqgvWgWUoxwCRUA5RW29T97fE1COcggUAeUUtXsX1BetAspRDoEioJyitt4n7+8JKEc5BIqAcoravQvqi1YB5SiHQBFQTlFb75P39wSUoxwCReA/WMJUCOKnVeAAAAAASUVORK5CYII=" />
+                    </defs>
+                  </svg>
+                </span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li><a class="dropdown-item" href="#">Русский</a></li>
+                <li><a class="dropdown-item" href="#">English</a></li>
+              </ul>
+            </div>
+            <button class="nav-burger px-0">
+              <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_2012_11317)">
+                    <path d="M20 12.4473H4" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20 17.4473H4" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20 7.5H4" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2012_11317">
+                      <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <a class="pagination-link d-flex align-items-center gap-2" href="index.html">
+      <span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.0832 7H2.9165" stroke="#5570B2" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M6.99984 11.0827L2.9165 6.99935L6.99984 2.91602" stroke="#5570B2" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </span>
+      На главную
+    </a>
+    <div class="tour-btns d-flex align-items-center gap-2">
+      <button class="tour-btn tour-btn1">Событие</button>
+      <button class="tour-btn tour-btn2">
+        <span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.00016 5.8324C7.64449 5.8324 8.16682 6.35472 8.16682 6.99906C8.16682 7.64339 7.64449 8.16572 7.00016 8.16572C6.35582 8.16572 5.8335 7.64339 5.8335 6.99906C5.8335 6.35472 6.35582 5.8324 7.00016 5.8324ZM4.9585 6.99906C4.9585 7.56285 5.18701 8.07326 5.55648 8.44273L4.93775 9.06146C4.40995 8.53364 4.0835 7.80448 4.0835 6.99906C4.0835 6.19365 4.40995 5.46447 4.93775 4.93665L5.55648 5.55538C5.18701 5.92485 4.9585 6.43526 4.9585 6.99906ZM9.04182 6.99906C9.04182 6.43526 8.8133 5.92485 8.44383 5.55538L9.06254 4.93667C9.59036 5.46447 9.91682 6.19365 9.91682 6.99906C9.91682 7.80448 9.59036 8.53364 9.06254 9.06146L8.44383 8.44273C8.8133 8.07326 9.04182 7.56285 9.04182 6.99906ZM3.2085 6.99906C3.2085 8.04609 3.63288 8.99402 4.31905 9.68017L3.70032 10.2989C2.85582 9.45438 2.3335 8.28772 2.3335 6.99906C2.3335 5.71039 2.85582 4.54373 3.70032 3.69922L4.31905 4.31795C3.63288 5.00409 3.2085 5.95202 3.2085 6.99906ZM10.7918 6.99906C10.7918 5.95202 10.3674 5.00409 9.68127 4.31795L10.3 3.69922C11.1445 4.54373 11.6668 5.71039 11.6668 6.99906C11.6668 8.28772 11.1445 9.45438 10.3 10.2989L9.68127 9.68017C10.3674 8.99402 10.7918 8.04609 10.7918 6.99906Z" fill="white" />
+          </svg>
+        </span>
+        Сейчас online
+      </button>
+      <button class="tour-btn tour-btn3">
+        Смотреть на ВК Видео 
+        <span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.8851 5.76519C11.9274 6.30368 11.9274 7.69762 10.8851 8.2361L4.59148 11.4874C3.57844 12.0108 2.3335 11.3296 2.3335 10.252V3.74934C2.3335 2.6717 3.57844 1.99053 4.59148 2.51387L10.8851 5.76519Z" fill="white" />
+          </svg>
+        </span>
+      </button>
+    </div>
+    <h1 class="tour-title">
+      BetBoom Чемпионат России по серфингу в дисциплине <br> «короткая доска»
+    </h1>
+
+    <div class="tour-block">
+      <div class="tour-hit">
+        <h2 class="tour-hit-title">Хит 1</h2>
+        <button class="tour-time">11:59</button>
+        <div class="tour-table">
+          <div class="tour-table-header d-flex align-items-center justify-content-between">
+            <div class="tour-table-header-left d-flex gap-3">
+              <div class="tour-table-header-text">№</div>
+              <div class="tour-table-header-text">ИМЯ</div>
+            </div>
+            <div class="tour-table-header-right">
+              <div class="tour-table-header-text">
+                ОЧКИ
+              </div>
+            </div>
+          </div>
+          <div class="tour-table-rows">
+            <div class="tour-table-row d-flex align-items-center justify-content-between">
+              <div class="tour-table-row-left d-flex align-items-center gap-3">
+                <div class="tour-row-number">1</div>
+                <div class="tour-row-number-user user-bg1">ПК</div>
+                <div class="tour-row-user-name">Павликов Константин</div>
+              </div>
+              <div class="tour-table-row-right">
+                <div class="tour-row-points">5.45</div>
+              </div>
+            </div>
+            <div class="tour-table-row d-flex align-items-center justify-content-between">
+              <div class="tour-table-row-left d-flex align-items-center gap-3">
+                <div class="tour-row-number">2</div>
+                <div class="tour-row-number-user user-bg2">ИА</div>
+                <div class="tour-row-user-name">Ильин Александр</div>
+              </div>
+              <div class="tour-table-row-right d-flex gap-3 align-items-center">
+                <div class="tour-row-lead">
+                  <span>до №1 — 3.46</span>
+                </div>
+                <div class="tour-row-points">3.45</div>
+              </div>
+            </div>
+            <div class="tour-table-row d-flex align-items-center justify-content-between">
+              <div class="tour-table-row-left d-flex align-items-center gap-3">
+                <div class="tour-row-number">3</div>
+                <div class="tour-row-number-user user-bg3">НА</div>
+                <div class="tour-row-user-name">Носов Антон</div>
+              </div>
+              <div class="tour-table-row-right d-flex gap-3 align-items-center">
+                <div class="tour-row-lead">
+                  <span>выход - 0.96</span>
+                </div>
+                <div class="tour-row-points">2.75</div>
+              </div>
+            </div>
+            <div class="tour-table-row d-flex align-items-center justify-content-between">
+              <div class="tour-table-row-left d-flex align-items-center gap-3">
+                <div class="tour-row-number">4</div>
+                <div class="tour-row-number-user user-bg4">ЧА</div>
+                <div class="tour-row-user-name">Черепенников Антон</div>
+              </div>
+              <div class="tour-table-row-right d-flex gap-3 align-items-center">
+                <div class="tour-row-lead">
+                  <span>выход - 2.21</span>
+                </div>
+                <div class="tour-row-points">2.35</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tour-hit">
+        <div class="tour-sport-row d-flex align-items-center justify-content-between">
+          <h2 class="tour-hit-title">Спортсмен</h2>
+          <div class="tour-sport-headers">
+            <div class="tour-sport-head">
+              <span class="tour-sport-head-text">1</span>
+            </div>
+            <div class="tour-sport-head">
+              <span class="tour-sport-head-text">2</span>
+            </div>
+            <div class="tour-sport-head">
+              <span class="tour-sport-head-text">3</span>
+            </div>
+            <div class="tour-sport-head">
+              <span class="tour-sport-head-text">4</span>
+            </div>
+            <div class="tour-sport-head">
+              <span class="tour-sport-head-text">5</span>
+            </div>
+            <div class="tour-sport-head">
+              <span class="tour-sport-head-text">6</span>
+            </div>
+            <div class="tour-sport-head">
+              <span class="tour-sport-head-text">7</span>
+            </div>
+          </div>
+        </div>
+        <div class="tour-sport-row tour-sport-table d-flex align-items-center justify-content-between mb-1">
+          <h4 class="tour-sport-row-title">Павликов Константин</h4>
+          <div class="tour-sport-headers">
+            <div class="tour-sport-head sport-head-bg">
+              <span class="tour-sport-head-text">1.4</span>
+            </div>
+            <div class="tour-sport-head sport-head-bg head-bg2">
+              <span class="tour-sport-head-text">3.5</span>
+            </div>
+            <div class="tour-sport-head sport-head-bg">
+              <span class="tour-sport-head-text">0.95</span>
+            </div>
+            <div class="tour-sport-head sport-head-bg">
+              <span class="tour-sport-head-text">0.75</span>
+            </div>
+            <div class="tour-sport-head sport-head-bg">
+              <span class="tour-sport-head-text">1.95</span>
+            </div>
+            <div class="tour-sport-head sport-head-bg head-bg2">
+              <span class="tour-sport-head-text">1.05</span>
+            </div>
+            <div class="tour-sport-head sport-head-bg">
+              <span class="tour-sport-head-text"></span>
+            </div>
+          </div>
+        </div>
+        <div class="tour-sport-row d-flex align-items-center justify-content-between mb-1">
+          <h4 class="tour-sport-row-title">Ильин Александр</h4>
+          <div class="tour-sport-headers">
+            <div class="tour-sport-head sport-head-bg">
+              <span class="tour-sport-head-text">1.4</span>
+            </div>
+            <div class="tour-sport-head sport-head-bg head-bg2">
+              <span class="tour-sport-head-text">3.5</span>
+            </div>
+            <div class="tour-sport-head sport-head-bg">
+              <span class="tour-sport-head-text">0.95</span>
+            </div>
+            <div class="tour-sport-head sport-head-bg head-bg2">
+              <span class="tour-sport-head-text">0.75</span>
+            </div>
+            <div class="tour-sport-head sport-head-bg">
+              <span class="tour-sport-head-text"></span>
+            </div>
+            <div class="tour-sport-head sport-head-bg">
+              <span class="tour-sport-head-text"></span>
+            </div>
+            <div class="tour-sport-head sport-head-bg">
+              <span class="tour-sport-head-text"></span>
+            </div>
+          </div>
+        </div>
+        <div class="tour-sport-row d-flex align-items-center justify-content-between mb-1">
+          <h4 class="tour-sport-row-title">Носов Антон</h4>
+          <div class="tour-sport-headers">
+            <div class="tour-sport-head sport-head-bg head-bg2">
+              <span class="tour-sport-head-text">1.4</span>
+            </div>
+            <div class="tour-sport-head sport-head-bg head-bg-rejected">
+            </div>
+            <div class="tour-sport-head sport-head-bg">
+              <span class="tour-sport-head-text">0.95</span>
+            </div>
+            <div class="tour-sport-head sport-head-bg">
+              <span class="tour-sport-head-text"></span>
+            </div>
+            <div class="tour-sport-head sport-head-bg">
+              <span class="tour-sport-head-text"></span>
+            </div>
+            <div class="tour-sport-head sport-head-bg">
+              <span class="tour-sport-head-text"></span>
+            </div>
+            <div class="tour-sport-head sport-head-bg">
+              <span class="tour-sport-head-text"></span>
+            </div>
+          </div>
+        </div>
+        <div class="tour-sport-row d-flex align-items-center justify-content-between">
+          <h4 class="tour-sport-row-title">Черепенников Антон</h4>
+          <div class="tour-sport-headers">
+            <div class="tour-sport-head sport-head-bg">
+              <span class="tour-sport-head-text">1.4</span>
+            </div>
+            <div class="tour-sport-head sport-head-bg head-bg2">
+              <span class="tour-sport-head-text">3.5</span>
+            </div>
+            <div class="tour-sport-head sport-head-bg">
+              <span class="tour-sport-head-text">0.95</span>
+            </div>
+            <div class="tour-sport-head sport-head-bg">
+              <span class="tour-sport-head-text">0.75</span>
+            </div>
+            <div class="tour-sport-head sport-head-bg head-bg2">
+              <span class="tour-sport-head-text">1.95</span>
+            </div>
+            <div class="tour-sport-head sport-head-bg">
+              <span class="tour-sport-head-text"></span>
+            </div>
+            <div class="tour-sport-head sport-head-bg">
+              <span class="tour-sport-head-text"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tour-block gap-0 mb50">
+      <h2 class="tour-hit-title mb-3">Дисциплины</h2>
+      <div class="d-flex flex-column gap-1">
+        <div class="tour-block-section-row">
+          <div class="tour-block-section-title">Проверка</div>
+          <div class="tour-block-section-date d-flex align-items-center gap-2">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.08333 5.83333H9.91667M4.08333 8.16667H7M4.08333 1.75V2.91667M9.91667 1.75V2.91667M3.61667 12.25H10.3833C11.0367 12.25 11.3635 12.25 11.613 12.1228C11.8325 12.011 12.011 11.8325 12.1228 11.613C12.25 11.3635 12.25 11.0367 12.25 10.3833V4.78333C12.25 4.12994 12.25 3.80324 12.1228 3.55368C12.011 3.33415 11.8325 3.15568 11.613 3.04383C11.3635 2.91667 11.0367 2.91667 10.3833 2.91667H3.61667C2.96327 2.91667 2.63657 2.91667 2.38701 3.04383C2.16749 3.15568 1.98901 3.33415 1.87716 3.55368C1.75 3.80324 1.75 4.12994 1.75 4.78333V10.3833C1.75 11.0367 1.75 11.3635 1.87716 11.613C1.98901 11.8325 2.16749 12.011 2.38701 12.1228C2.63657 12.25 2.96327 12.25 3.61667 12.25Z" stroke="#5570B2" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span>07 ноября 2024 — 15 ноября 2024</span>
+          </div> 
+        </div>
+        <div class="tour-block-section-row">
+          <div class="tour-block-section-title">Мужчины</div>
+          <div class="tour-block-section-date d-flex align-items-center gap-2">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.08333 5.83333H9.91667M4.08333 8.16667H7M4.08333 1.75V2.91667M9.91667 1.75V2.91667M3.61667 12.25H10.3833C11.0367 12.25 11.3635 12.25 11.613 12.1228C11.8325 12.011 12.011 11.8325 12.1228 11.613C12.25 11.3635 12.25 11.0367 12.25 10.3833V4.78333C12.25 4.12994 12.25 3.80324 12.1228 3.55368C12.011 3.33415 11.8325 3.15568 11.613 3.04383C11.3635 2.91667 11.0367 2.91667 10.3833 2.91667H3.61667C2.96327 2.91667 2.63657 2.91667 2.38701 3.04383C2.16749 3.15568 1.98901 3.33415 1.87716 3.55368C1.75 3.80324 1.75 4.12994 1.75 4.78333V10.3833C1.75 11.0367 1.75 11.3635 1.87716 11.613C1.98901 11.8325 2.16749 12.011 2.38701 12.1228C2.63657 12.25 2.96327 12.25 3.61667 12.25Z" stroke="#5570B2" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span>07 ноября 2024 — 15 ноября 2024</span>
+          </div> 
+        </div>
+        <div class="tour-block-section-row">
+          <div class="tour-block-section-title">Женщины</div>
+          <div class="tour-block-section-date d-flex align-items-center gap-2">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.08333 5.83333H9.91667M4.08333 8.16667H7M4.08333 1.75V2.91667M9.91667 1.75V2.91667M3.61667 12.25H10.3833C11.0367 12.25 11.3635 12.25 11.613 12.1228C11.8325 12.011 12.011 11.8325 12.1228 11.613C12.25 11.3635 12.25 11.0367 12.25 10.3833V4.78333C12.25 4.12994 12.25 3.80324 12.1228 3.55368C12.011 3.33415 11.8325 3.15568 11.613 3.04383C11.3635 2.91667 11.0367 2.91667 10.3833 2.91667H3.61667C2.96327 2.91667 2.63657 2.91667 2.38701 3.04383C2.16749 3.15568 1.98901 3.33415 1.87716 3.55368C1.75 3.80324 1.75 4.12994 1.75 4.78333V10.3833C1.75 11.0367 1.75 11.3635 1.87716 11.613C1.98901 11.8325 2.16749 12.011 2.38701 12.1228C2.63657 12.25 2.96327 12.25 3.61667 12.25Z" stroke="#5570B2" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span>07 ноября 2024 — 15 ноября 2024</span>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -732,6 +732,299 @@ p, h1, h2, h3, h4, h5, h6, span {
   }
 }
 
+.pagination-link {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: var(--primary-300);
+  text-decoration: none;
+}
+
+.tour-btns {
+  margin-top: 34px;
+  margin-bottom: 14px;
+}
+
+.tour-btn {
+  border-radius: 8px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 167%;
+  letter-spacing: 0.01em;
+  border: 0;
+}
+
+.tour-btn1 {
+  background: var(--primary-100);
+  color: var(--primary-300);
+}
+
+.tour-btn2 {
+  background: var(--system-100);
+  color: var(--system-white);
+}
+
+.tour-btn3 {
+  background: #1482ff;
+  color: var(--system-white);
+}
+
+.tour-title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 125%;
+  color: var(--system-black);
+}
+
+.tour-block {
+  margin-top: 34px;
+  border-radius: 14px;
+  padding: 14px;
+  max-width: 47%;
+  background: var(--primary-100);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tour-hit {
+  border-radius: 10px;
+  padding: 24px;
+  background: var(--system-white);
+}
+
+.tour-hit-title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+  color: var(--primary-300);
+}
+
+.tour-time {
+  border-radius: 10px;
+  padding: 18px 14px;
+  background: var(--primary-300);
+  width: 100%;
+  border: 0;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 87%;
+  letter-spacing: 0.01em;
+  color: var(--system-white);
+  margin: 14px 0;
+}
+
+.tour-table-header {
+  margin-bottom: 14px;
+}
+
+.tour-table-header-text {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 200%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--primary-200);
+}
+
+.tour-row-number {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: 0.01em;
+  color: var(--system-black);
+}
+
+.tour-row-number-user {
+  border-radius: 14px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.user-bg1 {
+  background: #ffe1e1;
+  color: #d97d76;
+}
+
+.user-bg2 {
+  background: #e5f3da;
+  color: #78ad4c; 
+}
+
+.user-bg3 {
+  background: #e1ecff;
+  color: #5c76b7;
+}
+
+.user-bg4 {
+  border: 1px solid #e2eaff;
+  background: transparent;
+  color: var(--primary-200);
+}
+
+.tour-row-user-name {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 129%;
+  color: var(--system-black);
+}
+
+.tour-row-points {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  text-align: right;
+  color: var(--primary-300);
+}
+
+.tour-table-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tour-row-lead {
+  border: 1px solid #e2eaff;
+  border-radius: 10px;
+  padding: 6px 12px 8px;
+  max-height: 26px;
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tour-row-lead span {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: var(--primary-300);
+}
+
+.tour-sport-headers {
+  display: flex;
+  gap: 4px;
+}
+
+.tour-sport-head {
+  padding: 9px 18px;
+  background: var(--system-white);
+  height: 42px;
+  width: 42px;
+}
+
+.tour-sport-head span {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 138%;
+  color: var(--primary-300);
+}
+
+.tour-sport-table {
+  margin-top: 18px;
+}
+
+.tour-sport-row-title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 129%;
+  color: var(--system-black);
+}
+
+.sport-head-bg {
+  background: #f1f5ff;
+  border-radius: 12px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 138%;
+  color: var(--primary-300);
+  height: 42px;
+  width: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.head-bg2 {
+  background: var(--system-100);
+}
+
+.head-bg2 span {
+  color: var(--system-white);
+}
+
+.head-bg-rejected {
+  background: url("../assets/img/block-rejected.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0;
+}
+
+.tour-block-section-row {
+  border-radius: 14px;
+  padding: 8px 8px 8px 24px;
+  background: var(--system-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tour-block-section-title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  color: var(--system-black);
+}
+
+.tour-block-section-date {
+  border-radius: 8px;
+  padding: 14px 18px;
+  background: #f1f5ff;
+}
+
+.tour-block-section-date span {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--primary-300);
+}
+
+.mb50 {
+  margin-bottom: 50px;
+}
+
 @media (max-width: 768px) {
 
   .only-pc {
