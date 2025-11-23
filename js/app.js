@@ -14,4 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
       }, hiddenEvents.length * 100);
     });
   }
+
+  const athleteToggles = document.querySelectorAll('.athlete-toggle');
+  athleteToggles.forEach(toggle => {
+    toggle.addEventListener('click', function() {
+      this.classList.toggle('toggled');
+    });
+  });
 });
