@@ -15,13 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  const athleteToggles = document.querySelectorAll('.athlete-toggle');
-  athleteToggles.forEach(toggle => {
-    toggle.addEventListener('click', function() {
-      this.classList.toggle('toggled');
-    });
-  });
-
   const athletes = [
     { name: 'Екимовский Ярослав Викторович', disabled: true, subtitle: '(уже в раунде)' },
     { name: 'Зинчук Денис Сергеевич', disabled: true, subtitle: '(уже в раунде)' },

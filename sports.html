@@ -117,6 +117,9 @@
   </header>
 
   <div class="container mb50 pb50">
+    <div class="snowboard-container only-mob mt-1 mb-3">
+      Сноуборд
+    </div>
     <div class="row g-0">
       <div class="col-auto sidebar">
         <ul class="nav flex-column">
@@ -240,18 +243,18 @@
 
       <div class="col main-content">
         <div class="container-fluid px-0">
-          <div class="main-content-title">
+          <div class="main-content-title mb10">
             <span>Создать спортсмена</span>
           </div>
 
           <div class="sport-buttons">
-            <button class="sport-btn">
+            <button class="sport-btn sport-btn-mob">
               Распределение
             </button>
-            <button class="sport-btn active">
+            <button class="sport-btn active only-pc">
               Спортсмены
             </button>
-            <button class="sport-btn">
+            <button class="sport-btn only-pc">
               Результаты
             </button>
           </div>
@@ -261,14 +264,14 @@
               <span>Моя команда</span>
             </h2>
 
-            <div class="team-search-row d-flex align-items-center mt-3 mb-4">
+            <div class="team-search-row team-search-row-mob d-flex align-items-center mt-3 mb-4">
               <div class="team-search flex-grow-1">
                 <input type="text" class="team-search-input" placeholder="Поиск по спортсменам">
                 <svg class="team-search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M16.6725 16.6412L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#8B9CC6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </div>
-              <button class="team-add-btn">
+              <button class="team-add-btn team-add-btn-mob">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8 3.33398V12.6673" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
                   <path d="M3.33334 8H12.6667" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
@@ -320,10 +323,7 @@
                   </div>
                 </div>
                 <div class="athlete-actions">
-                  <div class="athlete-toggle">
-                    <span class="athlete-toggle-label">Bib</span>
-                    <span class="athlete-toggle-value">00</span>
-                  </div>
+                  <input type="text" class="athlete-bib-input" placeholder="Bib" value="00">
                   <button class="athlete-action-btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M19 15.3333V18.4444C19 18.857 18.8361 19.2527 18.5444 19.5444C18.2527 19.8361 17.857 20 17.4444 20H6.55556C6.143 20 5.74734 19.8361 5.45561 19.5444C5.16389 19.2527 5 18.857 5 18.4444V7.55556C5 7.143 5.16389 6.74733 5.45561 6.45561C5.74734 6.16389 6.143 6 6.55556 6H9.66667" stroke="#8B9CC6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
@@ -364,10 +364,7 @@
                   </div>
                 </div>
                 <div class="athlete-actions">
-                  <div class="athlete-toggle">
-                    <span class="athlete-toggle-label">Bib</span>
-                    <span class="athlete-toggle-value">00</span>
-                  </div>
+                  <input type="text" class="athlete-bib-input" placeholder="Bib" value="00">
                   <button class="athlete-action-btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M19 15.3333V18.4444C19 18.857 18.8361 19.2527 18.5444 19.5444C18.2527 19.8361 17.857 20 17.4444 20H6.55556C6.143 20 5.74734 19.8361 5.45561 19.5444C5.16389 19.2527 5 18.857 5 18.4444V7.55556C5 7.143 5.16389 6.74733 5.45561 6.45561C5.74734 6.16389 6.143 6 6.55556 6H9.66667" stroke="#8B9CC6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
@@ -408,10 +405,7 @@
                   </div>
                 </div>
                 <div class="athlete-actions">
-                  <div class="athlete-toggle">
-                    <span class="athlete-toggle-label">Bib</span>
-                    <span class="athlete-toggle-value">00</span>
-                  </div>
+                  <input type="text" class="athlete-bib-input" placeholder="Bib" value="00">
                   <button class="athlete-action-btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M19 15.3333V18.4444C19 18.857 18.8361 19.2527 18.5444 19.5444C18.2527 19.8361 17.857 20 17.4444 20H6.55556C6.143 20 5.74734 19.8361 5.45561 19.5444C5.16389 19.2527 5 18.857 5 18.4444V7.55556C5 7.143 5.16389 6.74733 5.45561 6.45561C5.74734 6.16389 6.143 6 6.55556 6H9.66667" stroke="#8B9CC6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
@@ -452,10 +446,7 @@
                   </div>
                 </div>
                 <div class="athlete-actions">
-                  <div class="athlete-toggle">
-                    <span class="athlete-toggle-label">Bib</span>
-                    <span class="athlete-toggle-value">00</span>
-                  </div>
+                  <input type="text" class="athlete-bib-input" placeholder="Bib" value="00">
                   <button class="athlete-action-btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M19 15.3333V18.4444C19 18.857 18.8361 19.2527 18.5444 19.5444C18.2527 19.8361 17.857 20 17.4444 20H6.55556C6.143 20 5.74734 19.8361 5.45561 19.5444C5.16389 19.2527 5 18.857 5 18.4444V7.55556C5 7.143 5.16389 6.74733 5.45561 6.45561C5.74734 6.16389 6.143 6 6.55556 6H9.66667" stroke="#8B9CC6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
@@ -496,10 +487,7 @@
                   </div>
                 </div>
                 <div class="athlete-actions">
-                  <div class="athlete-toggle">
-                    <span class="athlete-toggle-label">Bib</span>
-                    <span class="athlete-toggle-value">00</span>
-                  </div>
+                  <input type="text" class="athlete-bib-input" placeholder="Bib" value="00">
                   <button class="athlete-action-btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M19 15.3333V18.4444C19 18.857 18.8361 19.2527 18.5444 19.5444C18.2527 19.8361 17.857 20 17.4444 20H6.55556C6.143 20 5.74734 19.8361 5.45561 19.5444C5.16389 19.2527 5 18.857 5 18.4444V7.55556C5 7.143 5.16389 6.74733 5.45561 6.45561C5.74734 6.16389 6.143 6 6.55556 6H9.66667" stroke="#8B9CC6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />

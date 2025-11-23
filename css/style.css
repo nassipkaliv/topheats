@@ -1391,65 +1391,31 @@ p, h1, h2, h3, h4, h5, h6, span {
   border-color: var(--primary-300);
 }
 
-.athlete-toggle {
-  display: flex;
-  align-items: center;
-  border-radius: 14px;
-  justify-content: space-between;
-  overflow: hidden;
+.athlete-bib-input {
+  width: 80px;
   height: 40px;
+  border: 1px solid #eef0f7;
+  border-radius: 14px;
+  padding: 8px 12px;
   background: rgba(139, 156, 198, 0.15);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.athlete-toggle-label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-family);
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 0.01em;
-  color: var(--primary-200);
-  height: 100%;
-  min-width: 40px;
-  padding: 8px 12px;
-  transition: all 0.3s ease;
-}
-
-.athlete-toggle-value {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--system-white);
-  border: 1px solid #eef0f7;
-  border-radius: 14px;
-  padding: 8px 12px;
   font-family: var(--font-family);
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 0.01em;
   color: var(--system-black);
-  height: 100%;
-  min-width: 40px;
+  text-align: center;
+  outline: none;
   transition: all 0.3s ease;
 }
 
-.athlete-toggle.toggled .athlete-toggle-label {
-  background: var(--system-white);
-  border: 1px solid #eef0f7;
-  border-radius: 14px;
-  color: var(--system-black);
-  font-size: 16px;
-}
-
-.athlete-toggle.toggled .athlete-toggle-value {
-  background: transparent;
-  border: none;
-  border-radius: 0;
+.athlete-bib-input::placeholder {
   color: var(--primary-200);
   font-size: 13px;
+}
+
+.athlete-bib-input:focus {
+  background: var(--system-white);
+  border-color: var(--primary-300);
 }
 
 .hit-top-row {
@@ -2142,6 +2108,49 @@ p, h1, h2, h3, h4, h5, h6, span {
   .round-row-mob {
     display: block;
   }
+
+  .mb10 {
+    margin-bottom: 10px;
+  }
+
+  .sport-buttons {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .sport-btn-mob {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .team-section {
+    margin-top: 12px;
+  }
+
+  .team-search {
+    width: 100%;
+  }
+
+  .team-search-row-mob {
+    gap: 8px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .team-add-btn-mob {
+    height: 50px;
+  }
+
+  .team-filter {
+    width: 100%;
+  }
+
+  .team-filter-svg {
+    right: 28%;
+  }
+
 }
 
 @media (max-width: 540px) {
