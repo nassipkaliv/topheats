@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
 	--system-100: #5ccc00;
@@ -11,9 +11,9 @@
 }
 
 :root {
-  --font-family: "RF Dewi", sans-serif;
+  --font-family: "Inter", sans-serif;
   --second-family: "Inter Tight", sans-serif;
-  --third-family: "Micra", sans-serif;
+  --third-family: "Roboto Condensed", sans-serif;
 }
 
 body {
@@ -787,17 +787,16 @@ p, h1, h2, h3, h4, h5, h6, span {
   margin-top: 34px;
   border-radius: 14px;
   padding: 14px;
-  max-width: 47%;
   background: var(--primary-100);
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  gap: 18px;
 }
 
 .tour-hit {
   border-radius: 10px;
   padding: 24px;
   background: var(--system-white);
+  width: 100%;
 }
 
 .tour-hit-title {
@@ -814,6 +813,7 @@ p, h1, h2, h3, h4, h5, h6, span {
   padding: 18px 14px;
   background: var(--primary-300);
   width: 100%;
+  max-width: 385px;
   border: 0;
   font-family: var(--font-family);
   font-weight: 700;
