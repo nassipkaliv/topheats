@@ -1661,6 +1661,10 @@ p, h1, h2, h3, h4, h5, h6, span {
   display: none;
 }
 
+.round-row-mob {
+  display: none;
+}
+
 @media (max-width: 768px) {
 
   .only-pc {
@@ -2069,6 +2073,74 @@ p, h1, h2, h3, h4, h5, h6, span {
 
   .tour-block-section-date {
     padding: 10px 18px;
+  }
+
+  .spread-btn {
+    width: 100%;
+    padding: 8px 14px;
+  }
+
+  .rounds-row {
+    margin-top: 16px;
+  }
+
+  .round-container.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in;
+  }
+
+  .round-container.disabled {
+    display: none;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .round-title {
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .round-title.disabled {
+    color: var(--primary-200);
+  }
+
+  .round-head-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    white-space: nowrap;
+  }
+
+  .round-head-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .round-head-row .round-title {
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .round-head-row .round-title:hover:not(.disabled) {
+    color: var(--primary-300);
+  }
+
+  .round-row-mob {
+    display: block;
   }
 }
 

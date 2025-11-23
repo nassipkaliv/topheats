@@ -89,4 +89,42 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  const roundTitles = document.querySelectorAll('.round-head-row .round-title');
+  const roundMapping = {
+    'Раунд 1': 'round1',
+    'Четвертьфинал': 'quarterfinal',
+    'Полуфинал': 'semifinal',
+    'Финал': 'final'
+  };
+
+  roundTitles.forEach(title => {
+    title.addEventListener('click', function() {
+      if (this.classList.contains('active')) {
+        return;
+      }
+      const roundName = this.textContent.trim();
+      const containerId = roundMapping[roundName];
+
+      if (!containerId) {
+        return;
+      }
+      roundTitles.forEach(t => {
+        t.classList.remove('active');
+        t.classList.add('disabled');
+      });
+      this.classList.add('active');
+      this.classList.remove('disabled');
+      const allContainers = document.querySelectorAll('.round-container');
+      allContainers.forEach(container => {
+        container.classList.remove('active');
+        container.classList.add('disabled');
+      });
+      const targetContainer = document.getElementById(containerId);
+      if (targetContainer) {
+        targetContainer.classList.remove('disabled');
+        targetContainer.classList.add('active');
+      }
+    });
+  });
 });
