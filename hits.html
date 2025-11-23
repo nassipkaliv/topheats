@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Topheats - Hits</title>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light py-0">
+      <div class="container d-flex align-items-center">
+        <a class="navbar-brand fw-bold" href="#">
+          <img src="assets/img/logo.png" alt="logo">
+        </a>
+
+        <div class="navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto ms-lg-5">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Спортсмены</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Команды</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Организаторы</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link fw-400 d-flex align-items-center" href="#">
+                <span class="me-2">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 8.00065H4.66667L6.66667 12.6673L9.33333 3.33398L11.3333 8.00065H14" stroke="#272C39" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                Мои событие
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link fw-400 d-flex align-items-center gap-1" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="me-2">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle cx="8" cy="8" r="8" fill="url(#pattern0_460_8537)" />
+                    <defs>
+                      <pattern id="pattern0_460_8537" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_460_8537" transform="translate(-0.251366) scale(0.00546448)" />
+                      </pattern>
+                      <image id="image0_460_8537" width="275" height="183" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAIAAAC+MS2jAAAEoElEQVR4Ae3VsU1lURAFwWcRAxIG9kaANqdNAIfgcAmKjeG0OSr0zTvGK00Pz68/AgR2gWcfMUGAwK9yLAGBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSLwPM8/PwIEZoGXt08/AgRWgWcd8J4AgZe3T+X4l0ugCCinqDm6BJSjHAJFQDlFzcUloBzlECgCyilqLi4B5SiHQBFQTlFzcQkoRzkEioByipqLS0A5yiFQBJRT1FxcAspRDoEioJyi5uISUI5yCBQB5RQ1F5eAcpRDoAgop6i5uASUoxwCRUA5Rc3FJaAc5RAoAsopai4uAeUoh0ARUE5Rc3EJKEc5BIqAcoqai0tAOcohUASUU9RcXALKUQ6BIqCcoubiElCOcggUAeUUNReXgHKUQ6AIKKeoubgElKMcAkVAOUXNxSWgHOUQKALKKWouLgHlKIdAEVBOUXNxCShHOQSKgHKKmotLQDnKIVAElFPUXFwCylEOgSKgnKLm4hJQjnIIFAHlFDUXl4BylEOgCCinqLm4BJSjHAJFQDlFzcUloBzlECgCyilqLi4B5SiHQBFQTlFzcQkoRzkEisDzvH75ESAwC/z8ffcjQGAVeL4//vgRILAKKMfhIFAElFPU1vvk/T0B5SiHQBFQTlG7d0F90SqgHOUQKALKKWrrffL+noBylEOgCCinqN27oL5oFVCOcggUAeUUtfU+eX9PQDnKIVAElFPU7l1QX7QKKEc5BIqAcoraep+8vyegHOUQKALKKWr3LqgvWgWUoxwCRUA5RW29T97fE1COcggUAeUUtXsX1BetAspRDoEioJyitt4n7+8JKEc5BIqAcoravQvqi1YB5SiHQBFQTlFb75P39wSUoxwCRUA5Re3eBfVFq4BylEOgCCinqK33yft7AspRDoEioJyidu+C+qJVQDnKIVAElFPU1vvk/T0B5SiHQBFQTlG7d0F90SqgHOUQKALKKWrrffL+noBylEOgCCinqN27oL5oFVCOcggUAeUUtfU+eX9PQDnKIVAElFPU7l1QX7QKKEc5BIqAcoraep+8vyegHOUQKALKKWr3LqgvWgWUoxwCRUA5RW29T97fE1COcggUAeUUtXsX1BetAspRDoEioJyitt4n7+8JKEc5BIqAcoravQvqi1YB5SiHQBFQTlFb75P39wSUoxwCReA/WMJUCOKnVeAAAAAASUVORK5CYII=" />
+                    </defs>
+                  </svg>
+                </span>
+                Русский
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li><a class="dropdown-item" href="#">Русский</a></li>
+                <li><a class="dropdown-item" href="#">English</a></li>
+              </ul>
+            </li>
+            <button class="nav-btn-item">
+              <span>Сноуборд</span>
+            </button>
+          </ul>
+
+          <div class="navbar-nav-mobile only-mob">
+            <div class="nav-item">
+              <a class="nav-link fw-400 d-flex align-items-center" href="#">
+                <span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H7L10 19L14 5L17 12H21" stroke="#272C39" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+            <div class="nav-item dropdown">
+              <a class="nav-link fw-400 d-flex align-items-center gap-1" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle cx="11" cy="11" r="11" fill="url(#pattern0_2012_11316)" />
+                    <defs>
+                      <pattern id="pattern0_2012_11316" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_2012_11316" transform="translate(-0.251366) scale(0.00546448)" />
+                      </pattern>
+                      <image id="image0_2012_11316" width="275" height="183" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAIAAAC+MS2jAAAEoElEQVR4Ae3VsU1lURAFwWcRAxIG9kaANqdNAIfgcAmKjeG0OSr0zTvGK00Pz68/AgR2gWcfMUGAwK9yLAGBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSKgnKJmhoBy7ACBIqCcomaGgHLsAIEioJyiZoaAcuwAgSLwPM8/PwIEZoGXt08/AgRWgWcd8J4AgZe3T+X4l0ugCCinqDm6BJSjHAJFQDlFzcUloBzlECgCyilqLi4B5SiHQBFQTlFzcQkoRzkEioByipqLS0A5yiFQBJRT1FxcAspRDoEioJyi5uISUI5yCBQB5RQ1F5eAcpRDoAgop6i5uASUoxwCRUA5Rc3FJaAc5RAoAsopai4uAeUoh0ARUE5Rc3EJKEc5BIqAcoqai0tAOcohUASUU9RcXALKUQ6BIqCcoubiElCOcggUAeUUNReXgHKUQ6AIKKeoubgElKMcAkVAOUXNxSWgHOUQKALKKWouLgHlKIdAEVBOUXNxCShHOQSKgHKKmotLQDnKIVAElFPUXFwCylEOgSKgnKLm4hJQjnIIFAHlFDUXl4BylEOgCCinqLm4BJSjHAJFQDlFzcUloBzlECgCyilqLi4B5SiHQBFQTlFzcQkoRzkEisDzvH75ESAwC/z8ffcjQGAVeL4//vgRILAKKMfhIFAElFPU1vvk/T0B5SiHQBFQTlG7d0F90SqgHOUQKALKKWrrffL+noBylEOgCCinqN27oL5oFVCOcggUAeUUtfU+eX9PQDnKIVAElFPU7l1QX7QKKEc5BIqAcoraep+8vyegHOUQKALKKWr3LqgvWgWUoxwCRUA5RW29T97fE1COcggUAeUUtXsX1BetAspRDoEioJyitt4n7+8JKEc5BIqAcoravQvqi1YB5SiHQBFQTlFb75P39wSUoxwCRUA5Re3eBfVFq4BylEOgCCinqK33yft7AspRDoEioJyidu+C+qJVQDnKIVAElFPU1vvk/T0B5SiHQBFQTlG7d0F90SqgHOUQKALKKWrrffL+noBylEOgCCinqN27oL5oFVCOcggUAeUUtfU+eX9PQDnKIVAElFPU7l1QX7QKKEc5BIqAcoraep+8vyegHOUQKALKKWr3LqgvWgWUoxwCRUA5RW29T97fE1COcggUAeUUtXsX1BetAspRDoEioJyitt4n7+8JKEc5BIqAcoravQvqi1YB5SiHQBFQTlFb75P39wSUoxwCReA/WMJUCOKnVeAAAAAASUVORK5CYII=" />
+                    </defs>
+                  </svg>
+                </span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li><a class="dropdown-item" href="#">Русский</a></li>
+                <li><a class="dropdown-item" href="#">English</a></li>
+              </ul>
+            </div>
+            <button class="nav-burger px-0">
+              <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_2012_11317)">
+                    <path d="M20 12.4473H4" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20 17.4473H4" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20 7.5H4" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2012_11317">
+                      <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container mb50 pb50">
+    <div class="row g-0">
+      <div class="col-auto sidebar">
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2">
+            <a class="nav-link" href="#">
+              <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.83333 0C4.10947 0 4.33333 0.22386 4.33333 0.5V1.00848C4.77469 0.999993 5.26093 0.999993 5.79572 1H8.5376C9.0724 0.999993 9.55867 0.999993 10 1.00848V0.5C10 0.22386 10.2239 0 10.5 0C10.7761 0 11 0.22386 11 0.5V1.05139C11.1733 1.06461 11.3374 1.08121 11.4927 1.10209C12.2743 1.20717 12.9069 1.42859 13.4059 1.92749C13.9047 2.42641 14.1261 3.05903 14.2313 3.84065C14.2648 4.09045 14.2873 4.36306 14.3025 4.66005C14.3225 4.71404 14.3333 4.77241 14.3333 4.83333C14.3333 4.87955 14.3271 4.92429 14.3153 4.96677C14.3333 5.5014 14.3333 6.10853 14.3333 6.79573V8.20427C14.3333 9.42947 14.3333 10.3999 14.2313 11.1593C14.1261 11.9409 13.9047 12.5736 13.4059 13.0725C12.9069 13.5714 12.2743 13.7928 11.4927 13.8979C10.7332 14 9.7628 14 8.5376 14H5.79573C4.57055 14 3.60013 14 2.84065 13.8979C2.05904 13.7928 1.42641 13.5714 0.927494 13.0725C0.428587 12.5736 0.207174 11.9409 0.102094 11.1593C-1.97391e-05 10.3999 -1.30312e-05 9.42947 3.02135e-07 8.20427V6.79573C-6.36453e-06 6.10847 -1.30559e-05 5.5014 0.0180069 4.96678C0.00627361 4.9243 3.02135e-07 4.87955 3.02135e-07 4.83333C3.02135e-07 4.77241 0.0108936 4.71403 0.030847 4.66004C0.045967 4.36305 0.0685069 4.09044 0.102094 3.84065C0.207174 3.05904 0.428587 2.42641 0.927494 1.92749C1.42641 1.42859 2.05904 1.20717 2.84065 1.10209C2.99593 1.08121 3.16004 1.06461 3.33333 1.05139V0.5C3.33333 0.22386 3.55719 0 3.83333 0ZM1.00873 5.33333C1.00021 5.76847 1 6.264 1 6.83333V8.16667C1 9.43787 1.00106 10.341 1.09317 11.0261C1.18335 11.6968 1.35246 12.0833 1.6346 12.3654C1.91674 12.6475 2.30317 12.8167 2.9739 12.9068C3.65901 12.9989 4.56212 13 5.83333 13H8.5C9.7712 13 10.6743 12.9989 11.3595 12.9068C12.0301 12.8167 12.4166 12.6475 12.6987 12.3654C12.9809 12.0833 13.15 11.6968 13.2401 11.0261C13.3323 10.341 13.3333 9.43787 13.3333 8.16667V6.83333C13.3333 6.264 13.3331 5.76847 13.3246 5.33333H1.00873ZM13.2789 4.33333H1.05445C1.06513 4.20707 1.0779 4.08749 1.09317 3.9739C1.18335 3.30317 1.35246 2.91674 1.6346 2.6346C1.91674 2.35246 2.30317 2.18335 2.9739 2.09317C3.65901 2.00106 4.56212 2 5.83333 2H8.5C9.7712 2 10.6743 2.00106 11.3595 2.09317C12.0301 2.18335 12.4166 2.35246 12.6987 2.6346C12.9809 2.91674 13.15 3.30317 13.2401 3.9739C13.2554 4.08749 13.2682 4.20707 13.2789 4.33333Z" fill="#272C39" />
+              </svg>
+              Мероприятие
+            </a>
+          </li>
+          <li class="nav-item mb-2">
+            <a class="nav-link" href="#">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.22872 2.53539C6.5812 1.73445 7.25747 1.33398 8 1.33398C8.74253 1.33398 9.4188 1.73445 10.7713 2.53539L11.2287 2.80629C12.5812 3.60723 13.2575 4.0077 13.6287 4.66732C14 5.32694 14 6.12788 14 7.72978V8.27152C14 9.87345 14 10.6744 13.6287 11.334C13.2575 11.9936 12.5812 12.3941 11.2287 13.195L10.7713 13.4659C9.4188 14.2669 8.74253 14.6673 8 14.6673C7.25747 14.6673 6.5812 14.2669 5.22872 13.4659L4.77128 13.195C3.4188 12.3941 2.74256 11.9936 2.37128 11.334C2 10.6744 2 9.87345 2 8.27152V7.72978C2 6.12788 2 5.32694 2.37128 4.66732C2.74256 4.0077 3.4188 3.60723 4.77128 2.80629L5.22872 2.53539Z" stroke="#272C39" />
+                <path d="M8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z" stroke="#272C39" />
+              </svg>
+              Настройки
+            </a>
+          </li>
+          <li class="nav-item mb-2">
+            <a class="nav-link" href="#">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_460_8554)">
+                  <path d="M16 0H0V16H16V0Z" fill="white" fill-opacity="0.01" />
+                  <path d="M11.9999 4.99935C12.9204 4.99935 13.6666 4.25315 13.6666 3.33268C13.6666 2.41221 12.9204 1.66602 11.9999 1.66602C11.0795 1.66602 10.3333 2.41221 10.3333 3.33268C10.3333 4.25315 11.0795 4.99935 11.9999 4.99935Z" stroke="#272C39" />
+                  <path d="M4 5.58972L6.6677 4.66602L10.3333 6.41555L6.6677 9.14808L10.3333 11.5611L8.00277 14.666" stroke="#272C39" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M11.7732 7.2148L12.6671 7.70093L14.6665 5.82227" stroke="#272C39" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M5.61641 10.5156L4.62651 11.8196L1.33472 13.666" stroke="#272C39" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_460_8554">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              Спортсмены
+            </a>
+          </li>
+          <li class="nav-item mb-2">
+            <a class="nav-link" href="#">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 0.833984C6.25102 0.833984 4.83325 2.25175 4.83325 4.00065C4.83325 5.74955 6.25102 7.16732 7.99992 7.16732C9.74885 7.16732 11.1666 5.74955 11.1666 4.00065C11.1666 2.25175 9.74885 0.833984 7.99992 0.833984ZM5.83325 4.00065C5.83325 2.80403 6.80332 1.83398 7.99992 1.83398C9.19652 1.83398 10.1666 2.80403 10.1666 4.00065C10.1666 5.19727 9.19652 6.16732 7.99992 6.16732C6.80332 6.16732 5.83325 5.19727 5.83325 4.00065Z" fill="#272C39" />
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 8.16602C6.64037 8.16602 5.38493 8.47988 4.45202 9.01295C3.53325 9.53795 2.83325 10.3394 2.83325 11.3327C2.83325 12.3259 3.53325 13.1274 4.45202 13.6524C5.38493 14.1855 6.64037 14.4993 7.99992 14.4993C9.35945 14.4993 10.6149 14.1855 11.5479 13.6524C12.4666 13.1274 13.1666 12.3259 13.1666 11.3327C13.1666 10.3394 12.4666 9.53795 11.5479 9.01295C10.6149 8.47988 9.35945 8.16602 7.99992 8.16602ZM3.83325 11.3327C3.83325 10.8531 4.17793 10.3213 4.94816 9.88122C5.70425 9.44915 6.78212 9.16602 7.99992 9.16602C9.21772 9.16602 10.2956 9.44915 11.0517 9.88122C11.8219 10.3213 12.1666 10.8531 12.1666 11.3327C12.1666 11.8122 11.8219 12.344 11.0517 12.7841C10.2956 13.2162 9.21772 13.4993 7.99992 13.4993C6.78212 13.4993 5.70425 13.2162 4.94816 12.7841C4.17793 12.344 3.83325 11.8122 3.83325 11.3327Z" fill="#272C39" />
+              </svg>
+              Судьи
+            </a>
+          </li>
+          <li class="nav-item mb-2">
+            <a class="nav-link active" href="#">
+              <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.16667 3.83333H11.8333M3.83333 3.83333V11.1667M2.63333 11.1667H10.3667C11.1134 11.1667 11.4868 11.1667 11.772 11.0213C12.0229 10.8935 12.2269 10.6895 12.3547 10.4387C12.5 10.1535 12.5 9.78007 12.5 9.03333V2.63333C12.5 1.8866 12.5 1.51323 12.3547 1.22801C12.2269 0.977127 12.0229 0.773153 11.772 0.645327C11.4868 0.5 11.1134 0.5 10.3667 0.5H2.63333C1.8866 0.5 1.51323 0.5 1.22801 0.645327C0.977127 0.773153 0.773153 0.977127 0.645327 1.22801C0.5 1.51323 0.5 1.88659 0.5 2.63333V9.03333C0.5 9.78007 0.5 10.1535 0.645327 10.4387C0.773153 10.6895 0.977127 10.8935 1.22801 11.0213C1.51323 11.1667 1.88659 11.1667 2.63333 11.1667Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              Расписание
+            </a>
+          </li>
+          <li class="nav-item mb-2">
+            <a class="nav-link" href="#">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 6.94512C2 4.81336 2 3.7475 2.25168 3.38892C2.50335 3.03034 3.50555 2.68729 5.50994 2.00118L5.89181 1.87046C6.93667 1.51281 7.45907 1.33398 8 1.33398C8.54093 1.33398 9.06333 1.51281 10.1082 1.87046L10.4901 2.00118C12.4945 2.68729 13.4967 3.03034 13.7483 3.38892C14 3.7475 14 4.81336 14 6.94512C14 7.26705 14 7.61625 14 7.99492C14 11.7536 11.174 13.5777 9.40093 14.3522C8.92 14.5623 8.67953 14.6673 8 14.6673C7.32047 14.6673 7.08 14.5623 6.59904 14.3522C4.82597 13.5777 2 11.7536 2 7.99492C2 7.61625 2 7.26705 2 6.94512Z" stroke="#272C39" />
+                <path d="M10.6666 7.70052L8.39992 6.00052C8.16285 5.82274 7.83698 5.82274 7.59992 6.00052L5.33325 7.70052M9.33325 9.36719L7.99992 8.36719L6.66659 9.36719" stroke="#272C39" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              Главный судья
+            </a>
+          </li>
+          <li class="nav-item mb-2">
+            <a class="nav-link" href="#">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.10203 3.60624C6.94645 2.0914 7.36865 1.33398 7.99992 1.33398C8.63119 1.33398 9.05339 2.0914 9.89779 3.60623L10.1163 3.99814C10.3563 4.4286 10.4762 4.64384 10.6633 4.78586C10.8504 4.92787 11.0833 4.98058 11.5493 5.08602L11.9736 5.182C13.6133 5.55302 14.4333 5.73853 14.6283 6.3658C14.8234 6.99305 14.2645 7.64672 13.1465 8.95392L12.8573 9.29212C12.5397 9.66358 12.3808 9.84932 12.3093 10.0791C12.2379 10.3089 12.2619 10.5567 12.3099 11.0524L12.3537 11.5036C12.5227 13.2477 12.6072 14.1198 12.0965 14.5075C11.5858 14.8951 10.8181 14.5417 9.28279 13.8348L8.88559 13.6519C8.44932 13.451 8.23119 13.3505 7.99992 13.3505C7.76865 13.3505 7.55052 13.451 7.11425 13.6519L6.71705 13.8348C5.18171 14.5417 4.41404 14.8951 3.90335 14.5075C3.39267 14.1198 3.47717 13.2477 3.64619 11.5036L3.68991 11.0524C3.73794 10.5567 3.76195 10.3089 3.69049 10.0791C3.61904 9.84932 3.46021 9.66358 3.14253 9.29212L2.85332 8.95392C1.73542 7.64672 1.17647 6.99305 1.37153 6.3658C1.5666 5.73853 2.38649 5.55302 4.02628 5.182L4.45051 5.08602C4.91649 4.98058 5.14947 4.92787 5.33655 4.78586C5.52362 4.64384 5.64361 4.42861 5.88357 3.99814L6.10203 3.60624Z" stroke="#272C39" />
+              </svg>
+              Приорететы
+            </a>
+          </li>
+          <li class="nav-item mb-2">
+            <a class="nav-link" href="#">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.74998 6L8.99998 7.5H6.49998L7.24998 6H5.14998C2.99998 6 1.14998 7.6 0.999976 9.75C0.849976 12.05 2.69998 14 4.99998 14C6.14998 14 7.19998 13.5 7.89998 12.75C9.79998 10.7 12.25 9.25 15 8.5V6H9.74998Z" stroke="#272C39" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M5 11.5C5.82843 11.5 6.5 10.8284 6.5 10C6.5 9.17157 5.82843 8.5 5 8.5C4.17157 8.5 3.5 9.17157 3.5 10C3.5 10.8284 4.17157 11.5 5 11.5Z" stroke="#272C39" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M8.5 2V3.5" stroke="#272C39" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M6.05005 3.05078L7.10005 4.10078" stroke="#272C39" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M10.9499 3.05078L9.8999 4.10078" stroke="#272C39" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              Судья
+            </a>
+          </li>
+          <li class="nav-item mb-2">
+            <a class="nav-link" href="#">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_460_8588)">
+                  <path d="M8.70659 5.40617L9.64993 6.3495C10.0833 6.78285 10.4271 7.29732 10.6617 7.86354C10.8962 8.42975 11.0169 9.03663 11.0169 9.6495C11.0169 10.2624 10.8962 10.8693 10.6617 11.4355C10.4271 12.0017 10.0833 12.5162 9.64993 12.9495L9.41393 13.1848C8.53871 14.0601 7.35167 14.5517 6.11393 14.5517C4.87619 14.5517 3.68914 14.0601 2.81393 13.1848C1.93871 12.3096 1.44702 11.1226 1.44702 9.88484C1.44702 8.6471 1.93871 7.46005 2.81393 6.58484L3.75726 7.52817C3.44551 7.8372 3.19786 8.20477 3.02855 8.60977C2.85923 9.01477 2.77157 9.44923 2.77061 9.88819C2.76965 10.3272 2.8554 10.762 3.02294 11.1677C3.19049 11.5735 3.43652 11.9421 3.74691 12.2525C4.05731 12.5629 4.42596 12.8089 4.8317 12.9765C5.23744 13.144 5.67227 13.2298 6.11124 13.2288C6.5502 13.2279 6.98466 13.1402 7.38966 12.9709C7.79466 12.8016 8.16222 12.5539 8.47126 12.2422L8.70726 12.0062C9.33216 11.3811 9.68321 10.5334 9.68321 9.6495C9.68321 8.76562 9.33216 7.91793 8.70726 7.29284L7.76393 6.3495L8.70726 5.40684L8.70659 5.40617ZM13.1853 9.4135L12.2426 8.47084C12.5543 8.1618 12.802 7.79423 12.9713 7.38923C13.1406 6.98423 13.2283 6.54978 13.2292 6.11081C13.2302 5.67185 13.1444 5.23701 12.9769 4.83128C12.8094 4.42554 12.5633 4.05689 12.2529 3.74649C11.9425 3.43609 11.5739 3.19006 11.1682 3.02252C10.7624 2.85498 10.3276 2.76923 9.88862 2.77019C9.44965 2.77115 9.01519 2.85881 8.6102 3.02812C8.2052 3.19744 7.83763 3.44508 7.52859 3.75684L7.29259 3.99284C6.66769 4.61793 6.31664 5.46562 6.31664 6.3495C6.31664 7.23338 6.66769 8.08108 7.29259 8.70617L8.23593 9.6495L7.29259 10.5922L6.34993 9.6495C5.91654 9.21616 5.57275 8.70169 5.3382 8.13547C5.10365 7.56925 4.98292 6.96238 4.98292 6.3495C4.98292 5.73663 5.10365 5.12975 5.3382 4.56354C5.57275 3.99732 5.91654 3.48285 6.34993 3.0495L6.58593 2.81417C7.46114 1.93896 8.64819 1.44727 9.88593 1.44727C11.1237 1.44727 12.3107 1.93896 13.1859 2.81417C14.0611 3.68938 14.5528 4.87643 14.5528 6.11417C14.5528 7.35191 14.0611 8.53896 13.1859 9.41417L13.1853 9.4135Z" fill="#272C39" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_460_8588">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              Ссылки
+            </a>
+          </li>
+          <li class="nav-item mb-2">
+            <a class="nav-link" href="#">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.22845 3.29292C4.4888 3.55327 4.4888 3.97538 4.22845 4.23573C2.14499 6.31919 2.14499 9.69716 4.22845 11.7806C4.4888 12.041 4.4888 12.4631 4.22845 12.7234C3.9681 12.9838 3.54599 12.9838 3.28564 12.7234C0.681478 10.1193 0.681478 5.89708 3.28564 3.29292C3.54599 3.03257 3.9681 3.03257 4.22845 3.29292ZM12.7162 3.29292C15.3203 5.89708 15.3203 10.1193 12.7162 12.7234C12.4558 12.9838 12.0337 12.9838 11.7734 12.7234C11.513 12.4631 11.513 12.041 11.7734 11.7806C13.8568 9.69716 13.8568 6.31919 11.7734 4.23573C11.513 3.97538 11.513 3.55327 11.7734 3.29292C12.0337 3.03257 12.4558 3.03257 12.7162 3.29292ZM6.20622 5.2085C6.46657 5.46885 6.46657 5.89096 6.20622 6.15131C5.18558 7.17195 5.18558 8.82674 6.20622 9.84738C6.46657 10.1077 6.46657 10.5298 6.20622 10.7902C5.94587 11.0505 5.52376 11.0505 5.26341 10.7902C3.72207 9.24885 3.72207 6.74984 5.26341 5.2085C5.52376 4.94815 5.94587 4.94815 6.20622 5.2085ZM10.8451 5.2085C12.3864 6.74984 12.3864 9.24885 10.8451 10.7902C10.5847 11.0505 10.1626 11.0505 9.90229 10.7902C9.64194 10.5298 9.64194 10.1077 9.90229 9.84738C10.9229 8.82674 10.9229 7.17195 9.90229 6.15131C9.64194 5.89096 9.64194 5.46885 9.90229 5.2085C10.1626 4.94815 10.5847 4.94815 10.8451 5.2085ZM8.05425 7.05478C8.60654 7.05478 9.05425 7.5025 9.05425 8.05478C9.05425 8.60707 8.60654 9.05478 8.05425 9.05478C7.50197 9.05478 7.05426 8.60707 7.05426 8.05478C7.05426 7.5025 7.50197 7.05478 8.05425 7.05478Z" fill="#272C39" />
+              </svg>
+              Для LIVE
+            </a>
+          </li>
+          <li class="nav-item mb-2">
+            <a class="nav-link" href="#">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.57143 12.5H10.4286C11.2965 12.5 12 11.8284 12 11V5.42857V5C12 4.17157 11.2965 3.5 10.4286 3.5H2.57143C1.70355 3.5 1 4.17157 1 5V11C1 11.8284 1.70355 12.5 2.57143 12.5Z" stroke="#272C39" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M3.5 6.5C3.77614 6.5 4 6.27614 4 6C4 5.72386 3.77614 5.5 3.5 5.5C3.22386 5.5 3 5.72386 3 6C3 6.27614 3.22386 6.5 3.5 6.5Z" stroke="#272C39" stroke-linejoin="round" />
+                <path d="M12 6.6L15 4.5V11.5L12 9.4" stroke="#272C39" stroke-linejoin="round" />
+              </svg>
+              Управление трансляцией
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col main-content">
+        <div class="container-fluid px-0">
+          <div class="hit-top-row">
+            <div class="d-flex align-items-center">
+              <div class="hit-top-title">
+                <a href="#">Сноуборд</a>
+                <span>/</span>
+                Мужчины 
+              </div>
+            </div>
+            <div class="d-flex align-items-center">
+              <button class="hit-top-btn border-0">
+                <span>
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.75 8.25V9.75C15.75 9.94891 15.671 10.1397 15.5303 10.2803C15.3897 10.421 15.1989 10.5 15 10.5H14.4323L13.902 11.7802L14.3032 12.1823C14.4439 12.3229 14.5228 12.5136 14.5228 12.7125C14.5228 12.9114 14.4439 13.1021 14.3032 13.2428L13.2427 14.3033C13.1021 14.4439 12.9114 14.5228 12.7125 14.5228C12.5136 14.5228 12.3229 14.4439 12.1823 14.3033L11.7802 13.902L10.5 14.4323V15C10.5 15.1989 10.421 15.3897 10.2803 15.5303C10.1397 15.671 9.94891 15.75 9.75 15.75H8.25C8.05109 15.75 7.86032 15.671 7.71967 15.5303C7.57902 15.3897 7.5 15.1989 7.5 15V14.4323L6.21975 13.902L5.81775 14.3033C5.6771 14.4439 5.48637 14.5228 5.2875 14.5228C5.08863 14.5228 4.8979 14.4439 4.75725 14.3033L3.69675 13.2428C3.55615 13.1021 3.47716 12.9114 3.47716 12.7125C3.47716 12.5136 3.55615 12.3229 3.69675 12.1823L4.09875 11.7802L3.56775 10.5H3C2.80109 10.5 2.61032 10.421 2.46967 10.2803C2.32902 10.1397 2.25 9.94891 2.25 9.75V8.25C2.25 8.05109 2.32902 7.86032 2.46967 7.71967C2.61032 7.57902 2.80109 7.5 3 7.5H3.56775L4.098 6.21975L3.69675 5.81775C3.55615 5.6771 3.47716 5.48637 3.47716 5.2875C3.47716 5.08863 3.55615 4.8979 3.69675 4.75725L4.75725 3.69675C4.8979 3.55615 5.08863 3.47716 5.2875 3.47716C5.48637 3.47716 5.6771 3.55615 5.81775 3.69675L6.21975 4.098L7.5 3.56775V3C7.5 2.80109 7.57902 2.61032 7.71967 2.46967C7.86032 2.32902 8.05109 2.25 8.25 2.25H9.75C9.94891 2.25 10.1397 2.32902 10.2803 2.46967C10.421 2.61032 10.5 2.80109 10.5 3V3.56775L11.7802 4.09875L12.1823 3.69675C12.3229 3.55615 12.5136 3.47716 12.7125 3.47716C12.9114 3.47716 13.1021 3.55615 13.2427 3.69675L14.3032 4.75725C14.4439 4.8979 14.5228 5.08863 14.5228 5.2875C14.5228 5.48637 14.4439 5.6771 14.3032 5.81775L13.902 6.21975L14.4323 7.5H15C15.1989 7.5 15.3897 7.57902 15.5303 7.71967C15.671 7.86032 15.75 8.05109 15.75 8.25Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9 6.75C9.59674 6.75 10.169 6.98705 10.591 7.40901C11.0129 7.83097 11.25 8.40326 11.25 9C11.25 9.59674 11.0129 10.169 10.591 10.591C10.169 11.0129 9.59674 11.25 9 11.25C8.40326 11.25 7.83097 11.0129 7.40901 10.591C6.98705 10.169 6.75 9.59674 6.75 9C6.75 8.40326 6.98705 7.83097 7.40901 7.40901C7.83097 6.98705 8.40326 6.75 9 6.75Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                Сноупарк и пайп(хиты)
+              </button>
+              <button class="hit-top-btn2 d-flex align-items-center justify-content-center border-0 bg-transparent">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="sport-buttons bg-transparent shadow-none">
+            <button class="sport-btn">
+              Распределение
+            </button>
+            <button class="sport-btn active sport-btn2">
+              Спортсмены
+            </button>
+            <button class="sport-btn">
+              Результаты
+            </button>
+          </div>
+
+          <div class="hit-container">
+            <h2 class="round-title">Полуфинал</h2>
+
+            <div class="hit-container-row">
+              <div class="round-block">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex align-items-center gap-3">
+                    <h2 class="tour-hit-title">Полуфинал</h2>
+                    <div class="tour-hit-label">скоро</div>
+                  </div>
+                  <button class="round-block-edit border-0 bg-transparent">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </div>
+                <p class="round-block-time">05.02.2025 / 20:54</p>
+                <div class="tour-table-header d-flex align-items-center justify-content-between">
+                  <div class="tour-table-header-left d-flex gap-3">
+                    <div class="tour-table-header-text">№</div>
+                    <div class="tour-table-header-text">ИМЯ</div>
+                  </div>
+                  <div class="tour-table-header-right">
+                    <div class="tour-table-header-text">
+                      ОЧКИ
+                    </div>
+                  </div>
+                </div>
+                <div class="round-block-row d-flex align-items-center justify-content-between">
+                    <div class="tour-table-row-left d-flex align-items-center gap-3">
+                      <div class="d-flex align-items-center justify-content-center">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4.66671 3.79167C5.47212 3.79167 6.12504 3.13875 6.12504 2.33333C6.12504 1.52792 5.47212 0.875 4.66671 0.875C3.86129 0.875 3.20837 1.52792 3.20837 2.33333C3.20837 3.13875 3.86129 3.79167 4.66671 3.79167Z" fill="#8B9CC6" />
+                          <path d="M9.04171 3.79167C9.84712 3.79167 10.5 3.13875 10.5 2.33333C10.5 1.52792 9.84712 0.875 9.04171 0.875C8.2363 0.875 7.58337 1.52792 7.58337 2.33333C7.58337 3.13875 8.2363 3.79167 9.04171 3.79167Z" fill="#8B9CC6" />
+                          <path d="M6.12504 6.99935C6.12504 7.80476 5.47212 8.45768 4.66671 8.45768C3.86129 8.45768 3.20837 7.80476 3.20837 6.99935C3.20837 6.19394 3.86129 5.54102 4.66671 5.54102C5.47212 5.54102 6.12504 6.19394 6.12504 6.99935Z" fill="#8B9CC6" />
+                          <path d="M9.04171 8.45768C9.84712 8.45768 10.5 7.80476 10.5 6.99935C10.5 6.19394 9.84712 5.54102 9.04171 5.54102C8.2363 5.54102 7.58337 6.19394 7.58337 6.99935C7.58337 7.80476 8.2363 8.45768 9.04171 8.45768Z" fill="#8B9CC6" />
+                          <path d="M6.12504 11.6673C6.12504 12.4727 5.47212 13.1257 4.66671 13.1257C3.86129 13.1257 3.20837 12.4727 3.20837 11.6673C3.20837 10.8619 3.86129 10.209 4.66671 10.209C5.47212 10.209 6.12504 10.8619 6.12504 11.6673Z" fill="#8B9CC6" />
+                          <path d="M9.04171 13.1257C9.84712 13.1257 10.5 12.4727 10.5 11.6673C10.5 10.8619 9.84712 10.209 9.04171 10.209C8.2363 10.209 7.58337 10.8619 7.58337 11.6673C7.58337 12.4727 8.2363 13.1257 9.04171 13.1257Z" fill="#8B9CC6" />
+                        </svg>
+                      </div>
+                      <div class="round-row-number">1</div>
+                      <div class="tour-row-number-user user-bg1">ПК</div>
+                      <div class="tour-row-user-name">Павликов <br> Константин</div>
+                    </div>
+                    <div class="tour-table-row-right d-flex flex-column">
+                      <div class="round-block-delete d-flex align-items-center justify-content-center">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4.5V6H6V7.5H18V6H15V4.5H9ZM6.75 8.25H8.25V17.6893L8.56066 18H15.4393L15.75 17.6893V8.25H17.25V18.3107L16.0607 19.5H7.93934L6.75 18.3107V8.25Z" fill="#8B9CC6" />
+                        </svg>
+                      </div>
+                    </div>
+                </div>
+                <div class="round-block-row">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div class="tour-table-row-left d-flex align-items-center gap-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.66671 3.79167C5.47212 3.79167 6.12504 3.13875 6.12504 2.33333C6.12504 1.52792 5.47212 0.875 4.66671 0.875C3.86129 0.875 3.20837 1.52792 3.20837 2.33333C3.20837 3.13875 3.86129 3.79167 4.66671 3.79167Z" fill="#8B9CC6" />
+                            <path d="M9.04171 3.79167C9.84712 3.79167 10.5 3.13875 10.5 2.33333C10.5 1.52792 9.84712 0.875 9.04171 0.875C8.2363 0.875 7.58337 1.52792 7.58337 2.33333C7.58337 3.13875 8.2363 3.79167 9.04171 3.79167Z" fill="#8B9CC6" />
+                            <path d="M6.12504 6.99935C6.12504 7.80476 5.47212 8.45768 4.66671 8.45768C3.86129 8.45768 3.20837 7.80476 3.20837 6.99935C3.20837 6.19394 3.86129 5.54102 4.66671 5.54102C5.47212 5.54102 6.12504 6.19394 6.12504 6.99935Z" fill="#8B9CC6" />
+                            <path d="M9.04171 8.45768C9.84712 8.45768 10.5 7.80476 10.5 6.99935C10.5 6.19394 9.84712 5.54102 9.04171 5.54102C8.2363 5.54102 7.58337 6.19394 7.58337 6.99935C7.58337 7.80476 8.2363 8.45768 9.04171 8.45768Z" fill="#8B9CC6" />
+                            <path d="M6.12504 11.6673C6.12504 12.4727 5.47212 13.1257 4.66671 13.1257C3.86129 13.1257 3.20837 12.4727 3.20837 11.6673C3.20837 10.8619 3.86129 10.209 4.66671 10.209C5.47212 10.209 6.12504 10.8619 6.12504 11.6673Z" fill="#8B9CC6" />
+                            <path d="M9.04171 13.1257C9.84712 13.1257 10.5 12.4727 10.5 11.6673C10.5 10.8619 9.84712 10.209 9.04171 10.209C8.2363 10.209 7.58337 10.8619 7.58337 11.6673C7.58337 12.4727 8.2363 13.1257 9.04171 13.1257Z" fill="#8B9CC6" />
+                          </svg>
+                        </div>
+                        <div class="round-row-number">2</div>
+                        <div class="tour-row-number-user user-bg2">ПК</div>
+                        <div class="tour-row-user-name">Павликов<br>Константин</div>
+                      </div>
+                      <div class="tour-table-row-right d-flex flex-column">
+                        <div class="round-block-delete d-flex align-items-center justify-content-center">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4.5V6H6V7.5H18V6H15V4.5H9ZM6.75 8.25H8.25V17.6893L8.56066 18H15.4393L15.75 17.6893V8.25H17.25V18.3107L16.0607 19.5H7.93934L6.75 18.3107V8.25Z" fill="#8B9CC6" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="round-block-row">
+                    <div class="d-flex align-items-center gap-3">
+                      <div class="tour-table-row-left d-flex align-items-center gap-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.66671 3.79167C5.47212 3.79167 6.12504 3.13875 6.12504 2.33333C6.12504 1.52792 5.47212 0.875 4.66671 0.875C3.86129 0.875 3.20837 1.52792 3.20837 2.33333C3.20837 3.13875 3.86129 3.79167 4.66671 3.79167Z" fill="#8B9CC6" />
+                            <path d="M9.04171 3.79167C9.84712 3.79167 10.5 3.13875 10.5 2.33333C10.5 1.52792 9.84712 0.875 9.04171 0.875C8.2363 0.875 7.58337 1.52792 7.58337 2.33333C7.58337 3.13875 8.2363 3.79167 9.04171 3.79167Z" fill="#8B9CC6" />
+                            <path d="M6.12504 6.99935C6.12504 7.80476 5.47212 8.45768 4.66671 8.45768C3.86129 8.45768 3.20837 7.80476 3.20837 6.99935C3.20837 6.19394 3.86129 5.54102 4.66671 5.54102C5.47212 5.54102 6.12504 6.19394 6.12504 6.99935Z" fill="#8B9CC6" />
+                            <path d="M9.04171 8.45768C9.84712 8.45768 10.5 7.80476 10.5 6.99935C10.5 6.19394 9.84712 5.54102 9.04171 5.54102C8.2363 5.54102 7.58337 6.19394 7.58337 6.99935C7.58337 7.80476 8.2363 8.45768 9.04171 8.45768Z" fill="#8B9CC6" />
+                            <path d="M6.12504 11.6673C6.12504 12.4727 5.47212 13.1257 4.66671 13.1257C3.86129 13.1257 3.20837 12.4727 3.20837 11.6673C3.20837 10.8619 3.86129 10.209 4.66671 10.209C5.47212 10.209 6.12504 10.8619 6.12504 11.6673Z" fill="#8B9CC6" />
+                            <path d="M9.04171 13.1257C9.84712 13.1257 10.5 12.4727 10.5 11.6673C10.5 10.8619 9.84712 10.209 9.04171 10.209C8.2363 10.209 7.58337 10.8619 7.58337 11.6673C7.58337 12.4727 8.2363 13.1257 9.04171 13.1257Z" fill="#8B9CC6" />
+                          </svg>
+                        </div>
+                        <div class="round-row-number">3</div>
+                      </div>
+                      <div class="tour-table-row-right d-flex flex-column w-100">
+                        <button class="round-block-add-btn">
+                          <span>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3.5 7H10.5M7 3.5V10.5" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                          Добавить спортсмена
+                        </button>
+                      </div>
+                    </div>
+                </div>
+                <div class="round-block-row border-0 pb-0 position-relative">
+                  <input type="text" class="round-block-input" placeholder="К">
+                  <svg class="team-search-icon pe-auto" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_592_7547)">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.01862 12.2631C8.36722 12.2502 9.70225 11.6902 10.6623 10.7393C11.8027 9.60966 12.3898 7.93863 12.1851 6.34328C11.834 3.60913 9.59178 1.75391 6.98493 1.75391C5.00459 1.75391 3.07959 2.99575 2.23521 4.7965C1.58881 6.17506 1.58771 7.83953 2.23521 9.22072C3.07346 11.0088 4.96697 12.2441 6.95125 12.2631C6.97378 12.2633 6.99609 12.2633 7.01862 12.2631ZM6.95693 11.3874C4.94268 11.368 3.0634 9.80653 2.68956 7.80475C2.42618 6.39337 2.92362 4.86628 3.9594 3.86397C5.16909 2.69366 7.07003 2.30144 8.6505 2.96491C10.0649 3.55859 11.1232 4.93672 11.3184 6.45506C11.4855 7.75641 11.0196 9.12031 10.1041 10.0601C9.30084 10.8841 8.17472 11.3761 7.01293 11.3874C6.99434 11.3874 6.97553 11.3874 6.95693 11.3874ZM4.24837 9.1365L6.37768 7.00719L4.24618 4.87569L4.85956 4.26253L6.99106 6.39403L9.19562 4.18947L9.80987 4.8035L7.60531 7.00828L9.81425 9.21722L9.20109 9.83059L6.99193 7.62144L4.86262 9.75075L4.24837 9.1365Z" fill="#8B9CC6" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_592_7547">
+                        <rect width="14" height="14" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <button class="round-block-watch-btn d-flex align-items-center justify-content-center border-0 w-100">
+                  Смотреть
+                </button>
+              </div>
+              <div class="round-block">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex align-items-center gap-3">
+                    <h2 class="tour-hit-title">Полуфинал</h2>
+                    <div class="tour-hit-label">скоро</div>
+                  </div>
+                  <button class="round-block-edit border-0 bg-transparent">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </div>
+                <p class="round-block-time">05.02.2025 / 20:54</p>
+                <div class="tour-table-header d-flex align-items-center justify-content-between">
+                  <div class="tour-table-header-left d-flex gap-3">
+                    <div class="tour-table-header-text">№</div>
+                    <div class="tour-table-header-text">ИМЯ</div>
+                  </div>
+                  <div class="tour-table-header-right">
+                    <div class="tour-table-header-text">
+                      ОЧКИ
+                    </div>
+                  </div>
+                </div>
+                <div class="round-block-row d-flex align-items-center justify-content-between">
+                    <div class="tour-table-row-left d-flex align-items-center gap-3">
+                      <div class="d-flex align-items-center justify-content-center">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4.66671 3.79167C5.47212 3.79167 6.12504 3.13875 6.12504 2.33333C6.12504 1.52792 5.47212 0.875 4.66671 0.875C3.86129 0.875 3.20837 1.52792 3.20837 2.33333C3.20837 3.13875 3.86129 3.79167 4.66671 3.79167Z" fill="#8B9CC6" />
+                          <path d="M9.04171 3.79167C9.84712 3.79167 10.5 3.13875 10.5 2.33333C10.5 1.52792 9.84712 0.875 9.04171 0.875C8.2363 0.875 7.58337 1.52792 7.58337 2.33333C7.58337 3.13875 8.2363 3.79167 9.04171 3.79167Z" fill="#8B9CC6" />
+                          <path d="M6.12504 6.99935C6.12504 7.80476 5.47212 8.45768 4.66671 8.45768C3.86129 8.45768 3.20837 7.80476 3.20837 6.99935C3.20837 6.19394 3.86129 5.54102 4.66671 5.54102C5.47212 5.54102 6.12504 6.19394 6.12504 6.99935Z" fill="#8B9CC6" />
+                          <path d="M9.04171 8.45768C9.84712 8.45768 10.5 7.80476 10.5 6.99935C10.5 6.19394 9.84712 5.54102 9.04171 5.54102C8.2363 5.54102 7.58337 6.19394 7.58337 6.99935C7.58337 7.80476 8.2363 8.45768 9.04171 8.45768Z" fill="#8B9CC6" />
+                          <path d="M6.12504 11.6673C6.12504 12.4727 5.47212 13.1257 4.66671 13.1257C3.86129 13.1257 3.20837 12.4727 3.20837 11.6673C3.20837 10.8619 3.86129 10.209 4.66671 10.209C5.47212 10.209 6.12504 10.8619 6.12504 11.6673Z" fill="#8B9CC6" />
+                          <path d="M9.04171 13.1257C9.84712 13.1257 10.5 12.4727 10.5 11.6673C10.5 10.8619 9.84712 10.209 9.04171 10.209C8.2363 10.209 7.58337 10.8619 7.58337 11.6673C7.58337 12.4727 8.2363 13.1257 9.04171 13.1257Z" fill="#8B9CC6" />
+                        </svg>
+                      </div>
+                      <div class="round-row-number">1</div>
+                      <div class="tour-row-number-user user-bg1">ПК</div>
+                      <div class="tour-row-user-name">Павликов <br> Константин</div>
+                    </div>
+                    <div class="tour-table-row-right d-flex flex-column">
+                      <div class="round-block-delete d-flex align-items-center justify-content-center">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4.5V6H6V7.5H18V6H15V4.5H9ZM6.75 8.25H8.25V17.6893L8.56066 18H15.4393L15.75 17.6893V8.25H17.25V18.3107L16.0607 19.5H7.93934L6.75 18.3107V8.25Z" fill="#8B9CC6" />
+                        </svg>
+                      </div>
+                    </div>
+                </div>
+                <div class="round-block-row">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div class="tour-table-row-left d-flex align-items-center gap-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.66671 3.79167C5.47212 3.79167 6.12504 3.13875 6.12504 2.33333C6.12504 1.52792 5.47212 0.875 4.66671 0.875C3.86129 0.875 3.20837 1.52792 3.20837 2.33333C3.20837 3.13875 3.86129 3.79167 4.66671 3.79167Z" fill="#8B9CC6" />
+                            <path d="M9.04171 3.79167C9.84712 3.79167 10.5 3.13875 10.5 2.33333C10.5 1.52792 9.84712 0.875 9.04171 0.875C8.2363 0.875 7.58337 1.52792 7.58337 2.33333C7.58337 3.13875 8.2363 3.79167 9.04171 3.79167Z" fill="#8B9CC6" />
+                            <path d="M6.12504 6.99935C6.12504 7.80476 5.47212 8.45768 4.66671 8.45768C3.86129 8.45768 3.20837 7.80476 3.20837 6.99935C3.20837 6.19394 3.86129 5.54102 4.66671 5.54102C5.47212 5.54102 6.12504 6.19394 6.12504 6.99935Z" fill="#8B9CC6" />
+                            <path d="M9.04171 8.45768C9.84712 8.45768 10.5 7.80476 10.5 6.99935C10.5 6.19394 9.84712 5.54102 9.04171 5.54102C8.2363 5.54102 7.58337 6.19394 7.58337 6.99935C7.58337 7.80476 8.2363 8.45768 9.04171 8.45768Z" fill="#8B9CC6" />
+                            <path d="M6.12504 11.6673C6.12504 12.4727 5.47212 13.1257 4.66671 13.1257C3.86129 13.1257 3.20837 12.4727 3.20837 11.6673C3.20837 10.8619 3.86129 10.209 4.66671 10.209C5.47212 10.209 6.12504 10.8619 6.12504 11.6673Z" fill="#8B9CC6" />
+                            <path d="M9.04171 13.1257C9.84712 13.1257 10.5 12.4727 10.5 11.6673C10.5 10.8619 9.84712 10.209 9.04171 10.209C8.2363 10.209 7.58337 10.8619 7.58337 11.6673C7.58337 12.4727 8.2363 13.1257 9.04171 13.1257Z" fill="#8B9CC6" />
+                          </svg>
+                        </div>
+                        <div class="round-row-number">2</div>
+                        <div class="tour-row-number-user user-bg2">ПК</div>
+                        <div class="tour-row-user-name">Павликов<br>Константин</div>
+                      </div>
+                      <div class="tour-table-row-right d-flex flex-column">
+                        <div class="round-block-delete d-flex align-items-center justify-content-center">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4.5V6H6V7.5H18V6H15V4.5H9ZM6.75 8.25H8.25V17.6893L8.56066 18H15.4393L15.75 17.6893V8.25H17.25V18.3107L16.0607 19.5H7.93934L6.75 18.3107V8.25Z" fill="#8B9CC6" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="round-block-row">
+                    <div class="d-flex align-items-center gap-3">
+                      <div class="tour-table-row-left d-flex align-items-center gap-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.66671 3.79167C5.47212 3.79167 6.12504 3.13875 6.12504 2.33333C6.12504 1.52792 5.47212 0.875 4.66671 0.875C3.86129 0.875 3.20837 1.52792 3.20837 2.33333C3.20837 3.13875 3.86129 3.79167 4.66671 3.79167Z" fill="#8B9CC6" />
+                            <path d="M9.04171 3.79167C9.84712 3.79167 10.5 3.13875 10.5 2.33333C10.5 1.52792 9.84712 0.875 9.04171 0.875C8.2363 0.875 7.58337 1.52792 7.58337 2.33333C7.58337 3.13875 8.2363 3.79167 9.04171 3.79167Z" fill="#8B9CC6" />
+                            <path d="M6.12504 6.99935C6.12504 7.80476 5.47212 8.45768 4.66671 8.45768C3.86129 8.45768 3.20837 7.80476 3.20837 6.99935C3.20837 6.19394 3.86129 5.54102 4.66671 5.54102C5.47212 5.54102 6.12504 6.19394 6.12504 6.99935Z" fill="#8B9CC6" />
+                            <path d="M9.04171 8.45768C9.84712 8.45768 10.5 7.80476 10.5 6.99935C10.5 6.19394 9.84712 5.54102 9.04171 5.54102C8.2363 5.54102 7.58337 6.19394 7.58337 6.99935C7.58337 7.80476 8.2363 8.45768 9.04171 8.45768Z" fill="#8B9CC6" />
+                            <path d="M6.12504 11.6673C6.12504 12.4727 5.47212 13.1257 4.66671 13.1257C3.86129 13.1257 3.20837 12.4727 3.20837 11.6673C3.20837 10.8619 3.86129 10.209 4.66671 10.209C5.47212 10.209 6.12504 10.8619 6.12504 11.6673Z" fill="#8B9CC6" />
+                            <path d="M9.04171 13.1257C9.84712 13.1257 10.5 12.4727 10.5 11.6673C10.5 10.8619 9.84712 10.209 9.04171 10.209C8.2363 10.209 7.58337 10.8619 7.58337 11.6673C7.58337 12.4727 8.2363 13.1257 9.04171 13.1257Z" fill="#8B9CC6" />
+                          </svg>
+                        </div>
+                        <div class="round-row-number">3</div>
+                      </div>
+                      <div class="tour-table-row-right d-flex flex-column w-100">
+                        <button class="round-block-add-btn">
+                          <span>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3.5 7H10.5M7 3.5V10.5" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                          Добавить спортсмена
+                        </button>
+                      </div>
+                    </div>
+                </div>
+                <div class="round-block-row border-0 pb-0">
+                    <div class="d-flex align-items-center gap-3">
+                      <div class="tour-table-row-left d-flex align-items-center gap-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.66671 3.79167C5.47212 3.79167 6.12504 3.13875 6.12504 2.33333C6.12504 1.52792 5.47212 0.875 4.66671 0.875C3.86129 0.875 3.20837 1.52792 3.20837 2.33333C3.20837 3.13875 3.86129 3.79167 4.66671 3.79167Z" fill="#8B9CC6" />
+                            <path d="M9.04171 3.79167C9.84712 3.79167 10.5 3.13875 10.5 2.33333C10.5 1.52792 9.84712 0.875 9.04171 0.875C8.2363 0.875 7.58337 1.52792 7.58337 2.33333C7.58337 3.13875 8.2363 3.79167 9.04171 3.79167Z" fill="#8B9CC6" />
+                            <path d="M6.12504 6.99935C6.12504 7.80476 5.47212 8.45768 4.66671 8.45768C3.86129 8.45768 3.20837 7.80476 3.20837 6.99935C3.20837 6.19394 3.86129 5.54102 4.66671 5.54102C5.47212 5.54102 6.12504 6.19394 6.12504 6.99935Z" fill="#8B9CC6" />
+                            <path d="M9.04171 8.45768C9.84712 8.45768 10.5 7.80476 10.5 6.99935C10.5 6.19394 9.84712 5.54102 9.04171 5.54102C8.2363 5.54102 7.58337 6.19394 7.58337 6.99935C7.58337 7.80476 8.2363 8.45768 9.04171 8.45768Z" fill="#8B9CC6" />
+                            <path d="M6.12504 11.6673C6.12504 12.4727 5.47212 13.1257 4.66671 13.1257C3.86129 13.1257 3.20837 12.4727 3.20837 11.6673C3.20837 10.8619 3.86129 10.209 4.66671 10.209C5.47212 10.209 6.12504 10.8619 6.12504 11.6673Z" fill="#8B9CC6" />
+                            <path d="M9.04171 13.1257C9.84712 13.1257 10.5 12.4727 10.5 11.6673C10.5 10.8619 9.84712 10.209 9.04171 10.209C8.2363 10.209 7.58337 10.8619 7.58337 11.6673C7.58337 12.4727 8.2363 13.1257 9.04171 13.1257Z" fill="#8B9CC6" />
+                          </svg>
+                        </div>
+                        <div class="round-row-number">4</div>
+                      </div>
+                      <div class="tour-table-row-right d-flex flex-column w-100">
+                        <button class="round-block-add-btn">
+                          <span>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3.5 7H10.5M7 3.5V10.5" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                          Добавить спортсмена
+                        </button>
+                      </div>
+                    </div>
+                </div>
+                <button class="round-block-watch-btn d-flex align-items-center justify-content-center border-0 w-100">
+                  Смотреть
+                </button>
+              </div>
+              <div class="round-block">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex align-items-center gap-3">
+                    <h2 class="tour-hit-title">Полуфинал</h2>
+                    <div class="tour-hit-label">скоро</div>
+                  </div>
+                  <button class="round-block-edit border-0 bg-transparent">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </div>
+                <p class="round-block-time">05.02.2025 / 20:54</p>
+                <div class="tour-table-header d-flex align-items-center justify-content-between">
+                  <div class="tour-table-header-left d-flex gap-3">
+                    <div class="tour-table-header-text">№</div>
+                    <div class="tour-table-header-text">ИМЯ</div>
+                  </div>
+                  <div class="tour-table-header-right">
+                    <div class="tour-table-header-text">
+                      ОЧКИ
+                    </div>
+                  </div>
+                </div>
+                <div class="round-block-row d-flex align-items-center justify-content-between">
+                    <div class="tour-table-row-left d-flex align-items-center gap-3">
+                      <div class="d-flex align-items-center justify-content-center">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4.66671 3.79167C5.47212 3.79167 6.12504 3.13875 6.12504 2.33333C6.12504 1.52792 5.47212 0.875 4.66671 0.875C3.86129 0.875 3.20837 1.52792 3.20837 2.33333C3.20837 3.13875 3.86129 3.79167 4.66671 3.79167Z" fill="#8B9CC6" />
+                          <path d="M9.04171 3.79167C9.84712 3.79167 10.5 3.13875 10.5 2.33333C10.5 1.52792 9.84712 0.875 9.04171 0.875C8.2363 0.875 7.58337 1.52792 7.58337 2.33333C7.58337 3.13875 8.2363 3.79167 9.04171 3.79167Z" fill="#8B9CC6" />
+                          <path d="M6.12504 6.99935C6.12504 7.80476 5.47212 8.45768 4.66671 8.45768C3.86129 8.45768 3.20837 7.80476 3.20837 6.99935C3.20837 6.19394 3.86129 5.54102 4.66671 5.54102C5.47212 5.54102 6.12504 6.19394 6.12504 6.99935Z" fill="#8B9CC6" />
+                          <path d="M9.04171 8.45768C9.84712 8.45768 10.5 7.80476 10.5 6.99935C10.5 6.19394 9.84712 5.54102 9.04171 5.54102C8.2363 5.54102 7.58337 6.19394 7.58337 6.99935C7.58337 7.80476 8.2363 8.45768 9.04171 8.45768Z" fill="#8B9CC6" />
+                          <path d="M6.12504 11.6673C6.12504 12.4727 5.47212 13.1257 4.66671 13.1257C3.86129 13.1257 3.20837 12.4727 3.20837 11.6673C3.20837 10.8619 3.86129 10.209 4.66671 10.209C5.47212 10.209 6.12504 10.8619 6.12504 11.6673Z" fill="#8B9CC6" />
+                          <path d="M9.04171 13.1257C9.84712 13.1257 10.5 12.4727 10.5 11.6673C10.5 10.8619 9.84712 10.209 9.04171 10.209C8.2363 10.209 7.58337 10.8619 7.58337 11.6673C7.58337 12.4727 8.2363 13.1257 9.04171 13.1257Z" fill="#8B9CC6" />
+                        </svg>
+                      </div>
+                      <div class="round-row-number">1</div>
+                      <div class="tour-row-number-user user-bg1">ПК</div>
+                      <div class="tour-row-user-name">Павликов <br> Константин</div>
+                    </div>
+                    <div class="tour-table-row-right d-flex flex-column">
+                      <div class="round-block-delete d-flex align-items-center justify-content-center">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4.5V6H6V7.5H18V6H15V4.5H9ZM6.75 8.25H8.25V17.6893L8.56066 18H15.4393L15.75 17.6893V8.25H17.25V18.3107L16.0607 19.5H7.93934L6.75 18.3107V8.25Z" fill="#8B9CC6" />
+                        </svg>
+                      </div>
+                    </div>
+                </div>
+                <div class="round-block-row">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div class="tour-table-row-left d-flex align-items-center gap-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.66671 3.79167C5.47212 3.79167 6.12504 3.13875 6.12504 2.33333C6.12504 1.52792 5.47212 0.875 4.66671 0.875C3.86129 0.875 3.20837 1.52792 3.20837 2.33333C3.20837 3.13875 3.86129 3.79167 4.66671 3.79167Z" fill="#8B9CC6" />
+                            <path d="M9.04171 3.79167C9.84712 3.79167 10.5 3.13875 10.5 2.33333C10.5 1.52792 9.84712 0.875 9.04171 0.875C8.2363 0.875 7.58337 1.52792 7.58337 2.33333C7.58337 3.13875 8.2363 3.79167 9.04171 3.79167Z" fill="#8B9CC6" />
+                            <path d="M6.12504 6.99935C6.12504 7.80476 5.47212 8.45768 4.66671 8.45768C3.86129 8.45768 3.20837 7.80476 3.20837 6.99935C3.20837 6.19394 3.86129 5.54102 4.66671 5.54102C5.47212 5.54102 6.12504 6.19394 6.12504 6.99935Z" fill="#8B9CC6" />
+                            <path d="M9.04171 8.45768C9.84712 8.45768 10.5 7.80476 10.5 6.99935C10.5 6.19394 9.84712 5.54102 9.04171 5.54102C8.2363 5.54102 7.58337 6.19394 7.58337 6.99935C7.58337 7.80476 8.2363 8.45768 9.04171 8.45768Z" fill="#8B9CC6" />
+                            <path d="M6.12504 11.6673C6.12504 12.4727 5.47212 13.1257 4.66671 13.1257C3.86129 13.1257 3.20837 12.4727 3.20837 11.6673C3.20837 10.8619 3.86129 10.209 4.66671 10.209C5.47212 10.209 6.12504 10.8619 6.12504 11.6673Z" fill="#8B9CC6" />
+                            <path d="M9.04171 13.1257C9.84712 13.1257 10.5 12.4727 10.5 11.6673C10.5 10.8619 9.84712 10.209 9.04171 10.209C8.2363 10.209 7.58337 10.8619 7.58337 11.6673C7.58337 12.4727 8.2363 13.1257 9.04171 13.1257Z" fill="#8B9CC6" />
+                          </svg>
+                        </div>
+                        <div class="round-row-number">2</div>
+                        <div class="tour-row-number-user user-bg2">ПК</div>
+                        <div class="tour-row-user-name">Павликов<br>Константин</div>
+                      </div>
+                      <div class="tour-table-row-right d-flex flex-column">
+                        <div class="round-block-delete d-flex align-items-center justify-content-center">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4.5V6H6V7.5H18V6H15V4.5H9ZM6.75 8.25H8.25V17.6893L8.56066 18H15.4393L15.75 17.6893V8.25H17.25V18.3107L16.0607 19.5H7.93934L6.75 18.3107V8.25Z" fill="#8B9CC6" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="round-block-row">
+                    <div class="d-flex align-items-center gap-3">
+                      <div class="tour-table-row-left d-flex align-items-center gap-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.66671 3.79167C5.47212 3.79167 6.12504 3.13875 6.12504 2.33333C6.12504 1.52792 5.47212 0.875 4.66671 0.875C3.86129 0.875 3.20837 1.52792 3.20837 2.33333C3.20837 3.13875 3.86129 3.79167 4.66671 3.79167Z" fill="#8B9CC6" />
+                            <path d="M9.04171 3.79167C9.84712 3.79167 10.5 3.13875 10.5 2.33333C10.5 1.52792 9.84712 0.875 9.04171 0.875C8.2363 0.875 7.58337 1.52792 7.58337 2.33333C7.58337 3.13875 8.2363 3.79167 9.04171 3.79167Z" fill="#8B9CC6" />
+                            <path d="M6.12504 6.99935C6.12504 7.80476 5.47212 8.45768 4.66671 8.45768C3.86129 8.45768 3.20837 7.80476 3.20837 6.99935C3.20837 6.19394 3.86129 5.54102 4.66671 5.54102C5.47212 5.54102 6.12504 6.19394 6.12504 6.99935Z" fill="#8B9CC6" />
+                            <path d="M9.04171 8.45768C9.84712 8.45768 10.5 7.80476 10.5 6.99935C10.5 6.19394 9.84712 5.54102 9.04171 5.54102C8.2363 5.54102 7.58337 6.19394 7.58337 6.99935C7.58337 7.80476 8.2363 8.45768 9.04171 8.45768Z" fill="#8B9CC6" />
+                            <path d="M6.12504 11.6673C6.12504 12.4727 5.47212 13.1257 4.66671 13.1257C3.86129 13.1257 3.20837 12.4727 3.20837 11.6673C3.20837 10.8619 3.86129 10.209 4.66671 10.209C5.47212 10.209 6.12504 10.8619 6.12504 11.6673Z" fill="#8B9CC6" />
+                            <path d="M9.04171 13.1257C9.84712 13.1257 10.5 12.4727 10.5 11.6673C10.5 10.8619 9.84712 10.209 9.04171 10.209C8.2363 10.209 7.58337 10.8619 7.58337 11.6673C7.58337 12.4727 8.2363 13.1257 9.04171 13.1257Z" fill="#8B9CC6" />
+                          </svg>
+                        </div>
+                        <div class="round-row-number">3</div>
+                      </div>
+                      <div class="tour-table-row-right d-flex flex-column w-100">
+                        <button class="round-block-add-btn">
+                          <span>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3.5 7H10.5M7 3.5V10.5" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                          Добавить спортсмена
+                        </button>
+                      </div>
+                    </div>
+                </div>
+                <div class="round-block-row border-0 pb-0">
+                    <div class="d-flex align-items-center gap-3">
+                      <div class="tour-table-row-left d-flex align-items-center gap-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.66671 3.79167C5.47212 3.79167 6.12504 3.13875 6.12504 2.33333C6.12504 1.52792 5.47212 0.875 4.66671 0.875C3.86129 0.875 3.20837 1.52792 3.20837 2.33333C3.20837 3.13875 3.86129 3.79167 4.66671 3.79167Z" fill="#8B9CC6" />
+                            <path d="M9.04171 3.79167C9.84712 3.79167 10.5 3.13875 10.5 2.33333C10.5 1.52792 9.84712 0.875 9.04171 0.875C8.2363 0.875 7.58337 1.52792 7.58337 2.33333C7.58337 3.13875 8.2363 3.79167 9.04171 3.79167Z" fill="#8B9CC6" />
+                            <path d="M6.12504 6.99935C6.12504 7.80476 5.47212 8.45768 4.66671 8.45768C3.86129 8.45768 3.20837 7.80476 3.20837 6.99935C3.20837 6.19394 3.86129 5.54102 4.66671 5.54102C5.47212 5.54102 6.12504 6.19394 6.12504 6.99935Z" fill="#8B9CC6" />
+                            <path d="M9.04171 8.45768C9.84712 8.45768 10.5 7.80476 10.5 6.99935C10.5 6.19394 9.84712 5.54102 9.04171 5.54102C8.2363 5.54102 7.58337 6.19394 7.58337 6.99935C7.58337 7.80476 8.2363 8.45768 9.04171 8.45768Z" fill="#8B9CC6" />
+                            <path d="M6.12504 11.6673C6.12504 12.4727 5.47212 13.1257 4.66671 13.1257C3.86129 13.1257 3.20837 12.4727 3.20837 11.6673C3.20837 10.8619 3.86129 10.209 4.66671 10.209C5.47212 10.209 6.12504 10.8619 6.12504 11.6673Z" fill="#8B9CC6" />
+                            <path d="M9.04171 13.1257C9.84712 13.1257 10.5 12.4727 10.5 11.6673C10.5 10.8619 9.84712 10.209 9.04171 10.209C8.2363 10.209 7.58337 10.8619 7.58337 11.6673C7.58337 12.4727 8.2363 13.1257 9.04171 13.1257Z" fill="#8B9CC6" />
+                          </svg>
+                        </div>
+                        <div class="round-row-number">4</div>
+                      </div>
+                      <div class="tour-table-row-right d-flex flex-column w-100">
+                        <button class="round-block-add-btn">
+                          <span>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3.5 7H10.5M7 3.5V10.5" stroke="#5570B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                          Добавить спортсмена
+                        </button>
+                      </div>
+                    </div>
+                </div>
+                <button class="round-block-watch-btn d-flex align-items-center justify-content-center border-0 w-100">
+                  Смотреть
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

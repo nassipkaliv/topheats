@@ -1075,6 +1075,7 @@ p, h1, h2, h3, h4, h5, h6, span {
   border-radius: 10px;
   padding: 14px;
   background: var(--system-white);
+  width: 100%;
 }
 
 .round-row-number {
@@ -1106,6 +1107,15 @@ p, h1, h2, h3, h4, h5, h6, span {
   color: var(--primary-200);
 }
 
+.round-title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 83%;
+  letter-spacing: 0.01em;
+  color: var(--system-black);
+}
+
 .round-block-row {
   border-bottom: 1px solid #e2eaff;
   padding-bottom: 14px;
@@ -1129,7 +1139,7 @@ p, h1, h2, h3, h4, h5, h6, span {
 .sport-buttons {
   display: flex;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 34px;
   border-radius: 14px;
   padding: 8px;
   box-shadow: 0 0 7px 0 #e2eaff;
@@ -1441,6 +1451,200 @@ p, h1, h2, h3, h4, h5, h6, span {
   font-size: 13px;
 }
 
+.hit-top-row {
+  border-radius: 14px;
+  padding: 14px 0px 14px 24px;
+  background: var(--system-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hit-top-title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0.01em;
+  color: var(--system-black);
+}
+
+.hit-top-title a {
+  color: var(--primary-300);
+  text-decoration: none;
+}
+
+.hit-top-title span {
+  color: #c3cce3;
+}
+
+.hit-top-btn {
+  background: var(--primary-300);
+  border-radius: 8px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+  color: var(--system-white);
+}
+
+.hit-top-btn2 {
+  border-radius: 8px;
+  padding: 12px 24px;
+}
+
+.sport-btn2 {
+  background: rgba(139, 156, 198, 0.15) !important;
+}
+
+.hit-container {
+  margin-top: 34px;
+}
+
+.hit-container-row {
+  margin-top: 20px;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.tour-hit-label {
+  border-radius: 10px;
+  padding: 6px 12px 8px;
+  background: #fff5d6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: #eab208;
+}
+
+.round-block-time {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.01em;
+  color: var(--primary-200);
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+
+.round-block-delete {
+  background: rgba(139, 156, 198, 0.15);
+  border-radius: 14px;
+  padding: 8px;
+}
+
+.round-block-add-btn {
+  background: transparent;
+  border: 1px solid var(--primary-300);
+  border-radius: 10px;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: var(--primary-300);
+}
+
+.round-block-input {
+  border-radius: 10px;
+  padding: 8px 16px;
+  background: #eef0f7;
+  border: 0;
+  outline: none;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: var(--primary-200);
+  width: 100%;
+}
+
+.round-block-input::placeholder {
+  color: var(--primary-200);
+  font-size: 14px;
+}
+
+.athlete-autocomplete {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 1000;
+  display: none;
+  border: 1px solid #e2eaff;
+  border-radius: 14px;
+  padding: 14px 24px;
+  box-shadow: 0 0 4px 0 rgba(210, 223, 255, 0.69);
+  background: var(--system-white);
+}
+
+.athlete-autocomplete.active {
+  display: block;
+}
+
+.athlete-autocomplete-item {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--primary-300);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 8px;
+}
+
+.athlete-autocomplete-item:last-child {
+  margin-bottom: 0;
+}
+
+.athlete-autocomplete-item.disabled {
+  color: #c3cce3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.athlete-autocomplete-item:not(.disabled):hover {
+  background: var(--primary-100);
+  color: var(--primary-300);
+}
+
+.athlete-autocomplete-item.disabled .athlete-autocomplete-subtitle {
+  color: var(--primary-200);
+}
+
+.athlete-autocomplete-subtitle {
+  font-size: 12px;
+  color: var(--primary-200);
+  margin-top: 2px;
+}
+
+.round-block-watch-btn {
+  border-radius: 8px;
+  padding: 12px 24px;
+  background: #eef0f7;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 117%;
+  letter-spacing: 0.01em;
+  color: var(--primary-300);
+}
 
 @media (max-width: 768px) {
 
