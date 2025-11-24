@@ -1307,16 +1307,15 @@ p, h1, h2, h3, h4, h5, h6, span {
 }
 
 .athlete-avatar {
-  border-radius: 8px;
-  width: 57px;
-  height: 60px;
   overflow: hidden;
   flex-shrink: 0;
+  align-items: center;
 }
 
 .athlete-avatar img {
-  width: 100%;
-  height: 100%;
+  border-radius: 8px;
+  width: 57px;
+  height: 60px;
   object-fit: cover;
 }
 
@@ -1391,31 +1390,47 @@ p, h1, h2, h3, h4, h5, h6, span {
   border-color: var(--primary-300);
 }
 
-.athlete-bib-input {
-  width: 80px;
+.athlete-bib-wrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 14px;
+  overflow: hidden;
   height: 40px;
+  background: rgba(139, 156, 198, 0.15);
+}
+
+.athlete-bib-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  color: var(--primary-200);
+  height: 100%;
+  min-width: 40px;
+  padding: 8px 12px;
+}
+
+.athlete-bib-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--system-white);
   border: 1px solid #eef0f7;
   border-radius: 14px;
   padding: 8px 12px;
-  background: rgba(139, 156, 198, 0.15);
   font-family: var(--font-family);
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 0.01em;
   color: var(--system-black);
+  height: 100%;
+  width: 50px;
   text-align: center;
   outline: none;
   transition: all 0.3s ease;
-}
-
-.athlete-bib-input::placeholder {
-  color: var(--primary-200);
-  font-size: 13px;
-}
-
-.athlete-bib-input:focus {
-  background: var(--system-white);
-  border-color: var(--primary-300);
 }
 
 .hit-top-row {
@@ -1827,22 +1842,49 @@ p, h1, h2, h3, h4, h5, h6, span {
 
   .athlete-card {
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 16px;
+    padding: 12px;
+    border-radius: 20px;
+  }
+
+  .athlete-name.only-mob {
+    display: block;
+    font-size: 16px;
+    width: 75%;
+    margin-left: 16px;
+    margin-top: 0;
+  }
+
+  .athlete-avatar {
+    display: flex;
+    flex-direction: row;
+    overflow: visible;
   }
 
   .athlete-info {
     width: 100%;
-    order: 2;
   }
 
-  .athlete-avatar {
-    order: 1;
-  }
 
   .athlete-actions {
-    order: 3;
     width: 100%;
-    justify-content: flex-end;
+    justify-content: space-between;
+  }
+
+  .athlete-action-btn {
+    width: 100%;
+  }
+
+  .athlete-bib-wrapper {
+    width: 100%;
+  }
+
+  .athlete-bib-label {
+    width: 100%;
+  }
+
+  .athlete-bib-input {
+    width: 100%;
   }
 
   .athlete-details {
