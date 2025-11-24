@@ -1646,6 +1646,10 @@ p, h1, h2, h3, h4, h5, h6, span {
   display: none;
 }
 
+.sport-buttons-mob {
+  display: none;
+}
+
 @media (max-width: 768px) {
 
   .only-pc {
@@ -2191,6 +2195,26 @@ p, h1, h2, h3, h4, h5, h6, span {
 
   .team-filter-svg {
     right: 28%;
+  }
+
+  .hit-container-row {
+    flex-direction: column;
+  }
+
+  .hit-top-row {
+    display: none;
+  }
+
+  .sport-buttons-pc {
+    display: none;
+  }
+
+  .sport-buttons-mob {
+    display: flex;
+  }
+
+  .hit-container {
+    margin-top: 16px;
   }
 
 }
